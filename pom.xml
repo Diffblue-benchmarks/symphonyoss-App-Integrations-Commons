@@ -458,6 +458,25 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <configuration>
+                    <rules>
+                        <myCustomRule implementation="org.symphonyoss.maven.enforcer.RequireGroupIdRule">
+                            <groupIdPrefix>org.symphonyoss</groupIdPrefix>
+                        </myCustomRule>
+                        <myCustomRule implementation="org.symphonyoss.maven.enforcer.RequireFileInArtifactRule">
+                            <fileName>NOTICE</fileName>
+                            <match>The Symphony Software Foundation (http://symphony.foundation)</match>
+                        </myCustomRule>
+                        <myCustomRule implementation="org.symphonyoss.maven.enforcer.RequireFileInArtifactRule">
+                            <fileName>LICENSE</fileName>
+                            <match>Copyright 2016 The Symphony Software Foundation</match>
+                        </myCustomRule>
+                    </rules>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
