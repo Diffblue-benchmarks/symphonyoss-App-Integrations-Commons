@@ -413,6 +413,51 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${javadoc.plugin.version}</version>
             </plugin>
+
+            <!-- DIFFBLUE -->
+            <!-- <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin> -->
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.17.4</version>
+                <configuration>
+                    <failWhenNoMutations>false</failWhenNoMutations>
+                    <targetTests>
+                        <param>**DiffblueTest*</param>
+                    </targetTests>
+                    <exportLineCoverage>true</exportLineCoverage>
+                    <outputFormats>
+                        <value>XML</value>
+                        <value>HTML</value>
+                    </outputFormats>
+                    <timestampedReports>false</timestampedReports>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>run-mutation-tests</id>
+                        <goals>
+                            <goal>mutationCoverage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -945,6 +990,13 @@
                     </plugin>
                 </plugins>
             </reporting>
+        </profile>
+        <!-- DIFFBLUE -->
+        <profile>
+            <id>aggregation</id>
+            <modules>
+                <module>integration-aggregation</module>
+            </modules>
         </profile>
     </profiles>
 </project>
