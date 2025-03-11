@@ -415,7 +415,7 @@
             </plugin>
 
             <!-- DIFFBLUE -->
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <executions>
@@ -432,16 +432,13 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>1.17.4</version>
                 <configuration>
                     <failWhenNoMutations>false</failWhenNoMutations>
-                    <targetTests>
-                        <param>**DiffblueTest*</param>
-                    </targetTests>
                     <exportLineCoverage>true</exportLineCoverage>
                     <outputFormats>
                         <value>XML</value>

@@ -50,7 +50,7 @@
 
   <build>
     <plugins>
-      <!-- <plugin>
+      <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <executions>
@@ -62,7 +62,7 @@
                   </goals>
               </execution>
           </executions>
-      </plugin> -->
+      </plugin>
       <plugin>
         <groupId>org.pitest</groupId>
         <artifactId>pitest-maven</artifactId>
