@@ -434,28 +434,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.pitest</groupId>
-                <artifactId>pitest-maven</artifactId>
-                <version>1.17.4</version>
-                <configuration>
-                    <failWhenNoMutations>false</failWhenNoMutations>
-                    <exportLineCoverage>true</exportLineCoverage>
-                    <outputFormats>
-                        <value>XML</value>
-                        <value>HTML</value>
-                    </outputFormats>
-                    <timestampedReports>false</timestampedReports>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>run-mutation-tests</id>
-                        <goals>
-                            <goal>mutationCoverage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <configuration>
@@ -1006,13 +984,6 @@
                     </plugin>
                 </plugins>
             </reporting>
-        </profile>
-        <!-- DIFFBLUE -->
-        <profile>
-            <id>aggregation</id>
-            <modules>
-                <module>integration-aggregation</module>
-            </modules>
         </profile>
     </profiles>
 </project>
