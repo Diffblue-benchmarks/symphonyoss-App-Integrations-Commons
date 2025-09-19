@@ -3,6 +3,7 @@ package org.symphonyoss.integration.webhook.parser.metadata;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Map;
 import org.junit.Test;
@@ -10,11 +11,13 @@ import org.junit.Test;
 public class EntityObjectDiffblueTest {
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>Then return Type is {@code null}.</li>
+   *   <li>Then return Type is {@code null}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link EntityObject#EntityObject()}
    *   <li>{@link EntityObject#getContent()}
@@ -23,8 +26,14 @@ public class EntityObjectDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void EntityObject.<init>()", "void EntityObject.<init>(String, String)",
-      "Map EntityObject.getContent()", "String EntityObject.getType()", "String EntityObject.getVersion()"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void EntityObject.<init>()",
+    "void EntityObject.<init>(String, String)",
+    "Map EntityObject.getContent()",
+    "String EntityObject.getType()",
+    "String EntityObject.getVersion()"
+  })
   public void testGettersAndSetters_thenReturnTypeIsNull() {
     // Arrange and Act
     EntityObject actualEntityObject = new EntityObject();
@@ -39,12 +48,14 @@ public class EntityObjectDiffblueTest {
 
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>When {@code Type}.</li>
-   *   <li>Then return Version is {@code 1.0.2}.</li>
+   *   <li>When {@code Type}.
+   *   <li>Then return Version is {@code 1.0.2}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link EntityObject#EntityObject(String, String)}
    *   <li>{@link EntityObject#getContent()}
@@ -53,8 +64,14 @@ public class EntityObjectDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void EntityObject.<init>()", "void EntityObject.<init>(String, String)",
-      "Map EntityObject.getContent()", "String EntityObject.getType()", "String EntityObject.getVersion()"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void EntityObject.<init>()",
+    "void EntityObject.<init>(String, String)",
+    "Map EntityObject.getContent()",
+    "String EntityObject.getType()",
+    "String EntityObject.getVersion()"
+  })
   public void testGettersAndSetters_whenType_thenReturnVersionIs102() {
     // Arrange and Act
     EntityObject actualEntityObject = new EntityObject("Type", "1.0.2");
@@ -69,10 +86,11 @@ public class EntityObjectDiffblueTest {
 
   /**
    * Test {@link EntityObject#addContent(String, Object)}.
-   * <p>
-   * Method under test: {@link EntityObject#addContent(String, Object)}
+   *
+   * <p>Method under test: {@link EntityObject#addContent(String, Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EntityObject.addContent(String, Object)"})
   public void testAddContent() {
     // Arrange

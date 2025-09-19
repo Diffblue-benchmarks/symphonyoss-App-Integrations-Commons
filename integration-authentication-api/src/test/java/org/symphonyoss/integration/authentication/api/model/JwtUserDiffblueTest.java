@@ -2,24 +2,28 @@ package org.symphonyoss.integration.authentication.api.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class JwtUserDiffblueTest {
   /**
    * Test {@link JwtUser#equals(Object)}, and {@link JwtUser#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link JwtUser#equals(Object)}
    *   <li>{@link JwtUser#hashCode()}
    * </ul>
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -53,24 +57,26 @@ public class JwtUserDiffblueTest {
 
     // Act and Assert
     assertEquals(jwtUser, jwtUser2);
-    int expectedHashCodeResult = jwtUser.hashCode();
-    assertEquals(expectedHashCodeResult, jwtUser2.hashCode());
+    assertEquals(jwtUser.hashCode(), jwtUser2.hashCode());
   }
 
   /**
    * Test {@link JwtUser#equals(Object)}, and {@link JwtUser#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link JwtUser#equals(Object)}
    *   <li>{@link JwtUser#hashCode()}
    * </ul>
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -96,14 +102,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -141,14 +149,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -186,14 +196,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
@@ -231,14 +243,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
@@ -276,14 +290,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
@@ -321,14 +337,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
@@ -366,14 +384,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual7() {
     // Arrange
@@ -411,14 +431,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual8() {
     // Arrange
@@ -456,14 +478,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual9() {
     // Arrange
@@ -501,14 +525,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual10() {
     // Arrange
@@ -546,14 +572,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual11() {
     // Arrange
@@ -591,14 +619,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual12() {
     // Arrange
@@ -636,14 +666,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
@@ -667,14 +699,16 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test {@link JwtUser#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtUser#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtUser#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtUser.equals(Object)", "int JwtUser.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange
@@ -698,8 +732,9 @@ public class JwtUserDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link JwtUser}
    *   <li>{@link JwtUser#setAvatarSmallUrl(String)}
@@ -729,15 +764,34 @@ public class JwtUserDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void JwtUser.<init>()", "String JwtUser.getAvatarSmallUrl()", "String JwtUser.getAvatarUrl()",
-      "String JwtUser.getCompany()", "String JwtUser.getCompanyId()", "String JwtUser.getDisplayName()",
-      "String JwtUser.getEmailAddress()", "String JwtUser.getFirstName()", "String JwtUser.getId()",
-      "String JwtUser.getLastName()", "String JwtUser.getLocation()", "String JwtUser.getTitle()",
-      "String JwtUser.getUsername()", "void JwtUser.setAvatarSmallUrl(String)", "void JwtUser.setAvatarUrl(String)",
-      "void JwtUser.setCompany(String)", "void JwtUser.setCompanyId(String)", "void JwtUser.setDisplayName(String)",
-      "void JwtUser.setEmailAddress(String)", "void JwtUser.setFirstName(String)", "void JwtUser.setId(String)",
-      "void JwtUser.setLastName(String)", "void JwtUser.setLocation(String)", "void JwtUser.setTitle(String)",
-      "void JwtUser.setUsername(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void JwtUser.<init>()",
+    "String JwtUser.getAvatarSmallUrl()",
+    "String JwtUser.getAvatarUrl()",
+    "String JwtUser.getCompany()",
+    "String JwtUser.getCompanyId()",
+    "String JwtUser.getDisplayName()",
+    "String JwtUser.getEmailAddress()",
+    "String JwtUser.getFirstName()",
+    "String JwtUser.getId()",
+    "String JwtUser.getLastName()",
+    "String JwtUser.getLocation()",
+    "String JwtUser.getTitle()",
+    "String JwtUser.getUsername()",
+    "void JwtUser.setAvatarSmallUrl(String)",
+    "void JwtUser.setAvatarUrl(String)",
+    "void JwtUser.setCompany(String)",
+    "void JwtUser.setCompanyId(String)",
+    "void JwtUser.setDisplayName(String)",
+    "void JwtUser.setEmailAddress(String)",
+    "void JwtUser.setFirstName(String)",
+    "void JwtUser.setId(String)",
+    "void JwtUser.setLastName(String)",
+    "void JwtUser.setLocation(String)",
+    "void JwtUser.setTitle(String)",
+    "void JwtUser.setUsername(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     JwtUser actualJwtUser = new JwtUser();

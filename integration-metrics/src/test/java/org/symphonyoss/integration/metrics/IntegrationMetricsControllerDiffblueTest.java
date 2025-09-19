@@ -4,6 +4,7 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,18 +17,17 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class IntegrationMetricsControllerDiffblueTest {
-  @InjectMocks
-  private IntegrationMetricsController integrationMetricsController;
+  @InjectMocks private IntegrationMetricsController integrationMetricsController;
 
-  @Mock
-  private List<IntegrationController> list;
+  @Mock private List<IntegrationController> list;
 
   /**
    * Test {@link IntegrationMetricsController#addIntegrationTimer(String)}.
-   * <p>
-   * Method under test: {@link IntegrationMetricsController#addIntegrationTimer(String)}
+   *
+   * <p>Method under test: {@link IntegrationMetricsController#addIntegrationTimer(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationMetricsController.addIntegrationTimer(String)"})
   public void testAddIntegrationTimer() {
     // Arrange
@@ -43,13 +43,15 @@ public class IntegrationMetricsControllerDiffblueTest {
 
   /**
    * Test {@link IntegrationMetricsController#addIntegrationTimer(String)}.
+   *
    * <ul>
-   *   <li>Then calls {@link IntegrationController#initController(String)}.</li>
+   *   <li>Then calls {@link IntegrationController#initController(String)}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationMetricsController#addIntegrationTimer(String)}
+   *
+   * <p>Method under test: {@link IntegrationMetricsController#addIntegrationTimer(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationMetricsController.addIntegrationTimer(String)"})
   public void testAddIntegrationTimer_thenCallsInitController() {
     // Arrange

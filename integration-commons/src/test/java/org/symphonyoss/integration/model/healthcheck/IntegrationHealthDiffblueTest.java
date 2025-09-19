@@ -2,6 +2,7 @@ package org.symphonyoss.integration.model.healthcheck;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.symphonyoss.integration.model.healthcheck.IntegrationFlags.ValueEnum;
@@ -9,14 +10,16 @@ import org.symphonyoss.integration.model.healthcheck.IntegrationFlags.ValueEnum;
 public class IntegrationHealthDiffblueTest {
   /**
    * Test {@link IntegrationHealth#getVersion()}.
+   *
    * <ul>
-   *   <li>Given {@link IntegrationHealth} (default constructor) Version is empty string.</li>
-   *   <li>Then return {@code N/A}.</li>
+   *   <li>Given {@link IntegrationHealth} (default constructor) Version is empty string.
+   *   <li>Then return {@code N/A}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationHealth#getVersion()}
+   *
+   * <p>Method under test: {@link IntegrationHealth#getVersion()}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String IntegrationHealth.getVersion()"})
   public void testGetVersion_givenIntegrationHealthVersionIsEmptyString_thenReturnNA() {
     // Arrange
@@ -41,16 +44,18 @@ public class IntegrationHealthDiffblueTest {
 
   /**
    * Test {@link IntegrationHealth#getVersion()}.
+   *
    * <ul>
-   *   <li>Given {@link IntegrationHealth} (default constructor) Version is {@code foo}.</li>
-   *   <li>Then return {@code foo}.</li>
+   *   <li>Given {@link IntegrationHealth} (default constructor) Version is {@code not empty}.
+   *   <li>Then return {@code not empty}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationHealth#getVersion()}
+   *
+   * <p>Method under test: {@link IntegrationHealth#getVersion()}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String IntegrationHealth.getVersion()"})
-  public void testGetVersion_givenIntegrationHealthVersionIsFoo_thenReturnFoo() {
+  public void testGetVersion_givenIntegrationHealthVersionIsNotEmpty_thenReturnNotEmpty() {
     // Arrange
     IntegrationFlags flags = new IntegrationFlags();
     flags.setAppCertificateInstalled(ValueEnum.OK);
@@ -65,32 +70,35 @@ public class IntegrationHealthDiffblueTest {
     integrationHealth.setMessage("Not all who wander are lost");
     integrationHealth.setName("Name");
     integrationHealth.setStatus("Status");
-    integrationHealth.setVersion("foo");
+    integrationHealth.setVersion("not empty");
 
     // Act and Assert
-    assertEquals("foo", integrationHealth.getVersion());
+    assertEquals("not empty", integrationHealth.getVersion());
   }
 
   /**
    * Test {@link IntegrationHealth#getVersion()}.
+   *
    * <ul>
-   *   <li>Given {@link IntegrationHealth} (default constructor).</li>
-   *   <li>Then return {@code N/A}.</li>
+   *   <li>Given {@link IntegrationHealth} (default constructor).
+   *   <li>Then return {@code N/A}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationHealth#getVersion()}
+   *
+   * <p>Method under test: {@link IntegrationHealth#getVersion()}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String IntegrationHealth.getVersion()"})
   public void testGetVersion_givenIntegrationHealth_thenReturnNA() {
     // Arrange, Act and Assert
-    assertEquals("N/A", (new IntegrationHealth()).getVersion());
+    assertEquals("N/A", new IntegrationHealth().getVersion());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link IntegrationHealth}
    *   <li>{@link IntegrationHealth#setConfigurator(IntegrationConfigurator)}
@@ -109,13 +117,23 @@ public class IntegrationHealthDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void IntegrationHealth.<init>()", "IntegrationConfigurator IntegrationHealth.getConfigurator()",
-      "IntegrationFlags IntegrationHealth.getFlags()", "String IntegrationHealth.getLatestPostTimestamp()",
-      "String IntegrationHealth.getMessage()", "String IntegrationHealth.getName()",
-      "String IntegrationHealth.getStatus()", "void IntegrationHealth.setConfigurator(IntegrationConfigurator)",
-      "void IntegrationHealth.setFlags(IntegrationFlags)", "void IntegrationHealth.setLatestPostTimestamp(String)",
-      "void IntegrationHealth.setMessage(String)", "void IntegrationHealth.setName(String)",
-      "void IntegrationHealth.setStatus(String)", "void IntegrationHealth.setVersion(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationHealth.<init>()",
+    "IntegrationConfigurator IntegrationHealth.getConfigurator()",
+    "IntegrationFlags IntegrationHealth.getFlags()",
+    "String IntegrationHealth.getLatestPostTimestamp()",
+    "String IntegrationHealth.getMessage()",
+    "String IntegrationHealth.getName()",
+    "String IntegrationHealth.getStatus()",
+    "void IntegrationHealth.setConfigurator(IntegrationConfigurator)",
+    "void IntegrationHealth.setFlags(IntegrationFlags)",
+    "void IntegrationHealth.setLatestPostTimestamp(String)",
+    "void IntegrationHealth.setMessage(String)",
+    "void IntegrationHealth.setName(String)",
+    "void IntegrationHealth.setStatus(String)",
+    "void IntegrationHealth.setVersion(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     IntegrationHealth actualIntegrationHealth = new IntegrationHealth();

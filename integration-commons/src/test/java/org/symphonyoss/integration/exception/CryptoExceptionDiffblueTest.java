@@ -3,23 +3,26 @@ package org.symphonyoss.integration.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class CryptoExceptionDiffblueTest {
   /**
    * Test {@link CryptoException#CryptoException(String, Throwable, String[])}.
-   * <p>
-   * Method under test: {@link CryptoException#CryptoException(String, Throwable, String[])}
+   *
+   * <p>Method under test: {@link CryptoException#CryptoException(String, Throwable, String[])}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CryptoException.<init>(String, Throwable, String[])"})
   public void testNewCryptoException() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    CryptoException actualCryptoException = new CryptoException("An error occurred", cause, "Solutions");
+    CryptoException actualCryptoException =
+        new CryptoException("An error occurred", cause, "Solutions");
 
     // Assert
     assertEquals(
@@ -32,20 +35,71 @@ public class CryptoExceptionDiffblueTest {
   }
 
   /**
-   * Test {@link CryptoException#CryptoException(String, String[])}.
-   * <p>
-   * Method under test: {@link CryptoException#CryptoException(String, String[])}
+   * Test {@link CryptoException#CryptoException(String, Throwable, String[])}.
+   *
+   * <p>Method under test: {@link CryptoException#CryptoException(String, Throwable, String[])}
    */
   @Test
-  @MethodsUnderTest({"void CryptoException.<init>(String, String[])"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void CryptoException.<init>(String, Throwable, String[])"})
   public void testNewCryptoException2() {
+    // Arrange
+    Throwable cause = new Throwable();
+
+    // Act
+    CryptoException actualCryptoException = new CryptoException("", cause, "Solutions");
+
+    // Assert
+    assertEquals(
+        "\nComponent: Cryptography service\nMessage: None\nSolutions: \nSolutions\nStack trace: \n",
+        actualCryptoException.getLocalizedMessage());
+    assertEquals(
+        "\nComponent: Cryptography service\nMessage: None\nSolutions: \nSolutions\nStack trace: \n",
+        actualCryptoException.getMessage());
+    assertSame(cause, actualCryptoException.getCause());
+  }
+
+  /**
+   * Test {@link CryptoException#CryptoException(String, String[])}.
+   *
+   * <p>Method under test: {@link CryptoException#CryptoException(String, String[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void CryptoException.<init>(String, String[])"})
+  public void testNewCryptoException3() {
     // Arrange and Act
     CryptoException actualCryptoException = new CryptoException("An error occurred", "Solutions");
 
     // Assert
-    assertEquals("\nComponent: Cryptography service\nMessage: An error occurred\nSolutions: \nSolutions\n",
+    assertEquals(
+        "\nComponent: Cryptography service\nMessage: An error occurred\nSolutions: \nSolutions\n",
         actualCryptoException.getLocalizedMessage());
-    assertEquals("\nComponent: Cryptography service\nMessage: An error occurred\nSolutions: \nSolutions\n",
+    assertEquals(
+        "\nComponent: Cryptography service\nMessage: An error occurred\nSolutions: \nSolutions\n",
+        actualCryptoException.getMessage());
+    assertNull(actualCryptoException.getCause());
+    assertEquals(0, actualCryptoException.getSuppressed().length);
+  }
+
+  /**
+   * Test {@link CryptoException#CryptoException(String, String[])}.
+   *
+   * <p>Method under test: {@link CryptoException#CryptoException(String, String[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void CryptoException.<init>(String, String[])"})
+  public void testNewCryptoException4() {
+    // Arrange and Act
+    CryptoException actualCryptoException = new CryptoException("", "Solutions");
+
+    // Assert
+    assertEquals(
+        "\nComponent: Cryptography service\nMessage: None\nSolutions: \nSolutions\n",
+        actualCryptoException.getLocalizedMessage());
+    assertEquals(
+        "\nComponent: Cryptography service\nMessage: None\nSolutions: \nSolutions\n",
         actualCryptoException.getMessage());
     assertNull(actualCryptoException.getCause());
     assertEquals(0, actualCryptoException.getSuppressed().length);
@@ -53,14 +107,16 @@ public class CryptoExceptionDiffblueTest {
 
   /**
    * Test {@link CryptoException#CryptoException(String, Throwable, String[])}.
+   *
    * <ul>
-   *   <li>When {@code An error occurred}.</li>
-   *   <li>Then return LocalizedMessage is a string.</li>
+   *   <li>When {@code An error occurred}.
+   *   <li>Then return LocalizedMessage is a string.
    * </ul>
-   * <p>
-   * Method under test: {@link CryptoException#CryptoException(String, Throwable, String[])}
+   *
+   * <p>Method under test: {@link CryptoException#CryptoException(String, Throwable, String[])}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CryptoException.<init>(String, Throwable, String[])"})
   public void testNewCryptoException_whenAnErrorOccurred_thenReturnLocalizedMessageIsAString() {
     // Arrange
@@ -71,26 +127,36 @@ public class CryptoExceptionDiffblueTest {
 
     // Assert
     assertEquals(
-        "\n" + "Component: Cryptography service\n" + "Message: An error occurred\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n" + "Stack trace: \n",
+        "\n"
+            + "Component: Cryptography service\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualCryptoException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Cryptography service\n" + "Message: An error occurred\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n" + "Stack trace: \n",
+        "\n"
+            + "Component: Cryptography service\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualCryptoException.getMessage());
     assertSame(cause, actualCryptoException.getCause());
   }
 
   /**
    * Test {@link CryptoException#CryptoException(String, String[])}.
+   *
    * <ul>
-   *   <li>When {@code An error occurred}.</li>
-   *   <li>Then return LocalizedMessage is a string.</li>
+   *   <li>When {@code An error occurred}.
+   *   <li>Then return LocalizedMessage is a string.
    * </ul>
-   * <p>
-   * Method under test: {@link CryptoException#CryptoException(String, String[])}
+   *
+   * <p>Method under test: {@link CryptoException#CryptoException(String, String[])}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CryptoException.<init>(String, String[])"})
   public void testNewCryptoException_whenAnErrorOccurred_thenReturnLocalizedMessageIsAString2() {
     // Arrange and Act
@@ -98,63 +164,19 @@ public class CryptoExceptionDiffblueTest {
 
     // Assert
     assertEquals(
-        "\n" + "Component: Cryptography service\n" + "Message: An error occurred\n" + "Solutions: \n"
+        "\n"
+            + "Component: Cryptography service\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualCryptoException.getLocalizedMessage());
-    assertEquals("\n" + "Component: Cryptography service\n" + "Message: An error occurred\n" + "Solutions: \n"
-        + "No solution has been cataloged for troubleshooting this problem.\n", actualCryptoException.getMessage());
-    assertNull(actualCryptoException.getCause());
-    assertEquals(0, actualCryptoException.getSuppressed().length);
-  }
-
-  /**
-   * Test {@link CryptoException#CryptoException(String, Throwable, String[])}.
-   * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Cause is {@code null}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link CryptoException#CryptoException(String, Throwable, String[])}
-   */
-  @Test
-  @MethodsUnderTest({"void CryptoException.<init>(String, Throwable, String[])"})
-  public void testNewCryptoException_whenNull_thenReturnCauseIsNull() {
-    // Arrange and Act
-    CryptoException actualCryptoException = new CryptoException(null, null, null);
-
-    // Assert
     assertEquals(
-        "\n" + "Component: Cryptography service\n" + "Message: None\n" + "Solutions: \n"
+        "\n"
+            + "Component: Cryptography service\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
-        actualCryptoException.getLocalizedMessage());
-    assertEquals("\n" + "Component: Cryptography service\n" + "Message: None\n" + "Solutions: \n"
-        + "No solution has been cataloged for troubleshooting this problem.\n", actualCryptoException.getMessage());
-    assertNull(actualCryptoException.getCause());
-    assertEquals(0, actualCryptoException.getSuppressed().length);
-  }
-
-  /**
-   * Test {@link CryptoException#CryptoException(String, String[])}.
-   * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return LocalizedMessage is a string.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link CryptoException#CryptoException(String, String[])}
-   */
-  @Test
-  @MethodsUnderTest({"void CryptoException.<init>(String, String[])"})
-  public void testNewCryptoException_whenNull_thenReturnLocalizedMessageIsAString() {
-    // Arrange and Act
-    CryptoException actualCryptoException = new CryptoException(null, null);
-
-    // Assert
-    assertEquals(
-        "\n" + "Component: Cryptography service\n" + "Message: None\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n",
-        actualCryptoException.getLocalizedMessage());
-    assertEquals("\n" + "Component: Cryptography service\n" + "Message: None\n" + "Solutions: \n"
-        + "No solution has been cataloged for troubleshooting this problem.\n", actualCryptoException.getMessage());
+        actualCryptoException.getMessage());
     assertNull(actualCryptoException.getCause());
     assertEquals(0, actualCryptoException.getSuppressed().length);
   }

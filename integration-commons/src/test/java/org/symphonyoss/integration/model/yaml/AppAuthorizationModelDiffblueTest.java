@@ -3,6 +3,7 @@ package org.symphonyoss.integration.model.yaml;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,8 +12,9 @@ import org.junit.Test;
 public class AppAuthorizationModelDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link AppAuthorizationModel}
    *   <li>{@link AppAuthorizationModel#setApplicationName(String)}
@@ -24,10 +26,16 @@ public class AppAuthorizationModelDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void AppAuthorizationModel.<init>()", "String AppAuthorizationModel.getApplicationName()",
-      "String AppAuthorizationModel.getApplicationURL()", "Map AppAuthorizationModel.getProperties()",
-      "void AppAuthorizationModel.setApplicationName(String)", "void AppAuthorizationModel.setApplicationURL(String)",
-      "void AppAuthorizationModel.setProperties(Map)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void AppAuthorizationModel.<init>()",
+    "String AppAuthorizationModel.getApplicationName()",
+    "String AppAuthorizationModel.getApplicationURL()",
+    "Map AppAuthorizationModel.getProperties()",
+    "void AppAuthorizationModel.setApplicationName(String)",
+    "void AppAuthorizationModel.setApplicationURL(String)",
+    "void AppAuthorizationModel.setProperties(Map)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     AppAuthorizationModel actualAppAuthorizationModel = new AppAuthorizationModel();

@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.List;
 import org.junit.Test;
@@ -11,11 +12,13 @@ import org.junit.Test;
 public class EntityDiffblueTest {
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>Then return Type is {@code null}.</li>
+   *   <li>Then return Type is {@code null}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Entity#Entity()}
    *   <li>{@link Entity#setPresentationML(String)}
@@ -27,9 +30,18 @@ public class EntityDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void Entity.<init>()", "void Entity.<init>(String)", "void Entity.<init>(String, String)",
-      "List Entity.getAttributes()", "List Entity.getEntities()", "String Entity.getName()",
-      "String Entity.getPresentationML()", "String Entity.getType()", "void Entity.setPresentationML(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void Entity.<init>()",
+    "void Entity.<init>(String)",
+    "void Entity.<init>(String, String)",
+    "List Entity.getAttributes()",
+    "List Entity.getEntities()",
+    "String Entity.getName()",
+    "String Entity.getPresentationML()",
+    "String Entity.getType()",
+    "void Entity.setPresentationML(String)"
+  })
   public void testGettersAndSetters_thenReturnTypeIsNull() {
     // Arrange and Act
     Entity actualEntity = new Entity();
@@ -49,12 +61,14 @@ public class EntityDiffblueTest {
 
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>When {@code Name}.</li>
-   *   <li>Then return {@code Name}.</li>
+   *   <li>When {@code Name}.
+   *   <li>Then return {@code Name}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Entity#Entity(String, String)}
    *   <li>{@link Entity#setPresentationML(String)}
@@ -66,9 +80,18 @@ public class EntityDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void Entity.<init>()", "void Entity.<init>(String)", "void Entity.<init>(String, String)",
-      "List Entity.getAttributes()", "List Entity.getEntities()", "String Entity.getName()",
-      "String Entity.getPresentationML()", "String Entity.getType()", "void Entity.setPresentationML(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void Entity.<init>()",
+    "void Entity.<init>(String)",
+    "void Entity.<init>(String, String)",
+    "List Entity.getAttributes()",
+    "List Entity.getEntities()",
+    "String Entity.getName()",
+    "String Entity.getPresentationML()",
+    "String Entity.getType()",
+    "void Entity.setPresentationML(String)"
+  })
   public void testGettersAndSetters_whenName_thenReturnName() {
     // Arrange and Act
     Entity actualEntity = new Entity("Name", "Type");
@@ -88,12 +111,14 @@ public class EntityDiffblueTest {
 
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>When {@code Type}.</li>
-   *   <li>Then return {@code Type}.</li>
+   *   <li>When {@code Type}.
+   *   <li>Then return {@code Type}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Entity#Entity(String)}
    *   <li>{@link Entity#setPresentationML(String)}
@@ -105,9 +130,18 @@ public class EntityDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void Entity.<init>()", "void Entity.<init>(String)", "void Entity.<init>(String, String)",
-      "List Entity.getAttributes()", "List Entity.getEntities()", "String Entity.getName()",
-      "String Entity.getPresentationML()", "String Entity.getType()", "void Entity.setPresentationML(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void Entity.<init>()",
+    "void Entity.<init>(String)",
+    "void Entity.<init>(String, String)",
+    "List Entity.getAttributes()",
+    "List Entity.getEntities()",
+    "String Entity.getName()",
+    "String Entity.getPresentationML()",
+    "String Entity.getType()",
+    "void Entity.setPresentationML(String)"
+  })
   public void testGettersAndSetters_whenType_thenReturnType() {
     // Arrange and Act
     Entity actualEntity = new Entity("Type");
@@ -127,14 +161,16 @@ public class EntityDiffblueTest {
 
   /**
    * Test {@link Entity#addAttribute(Attribute)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>Then {@link Entity#Entity(String)} with {@code Type} Attributes size is one.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>Then {@link Entity#Entity(String)} with {@code Type} Attributes size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#addAttribute(Attribute)}
+   *
+   * <p>Method under test: {@link Entity#addAttribute(Attribute)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Entity.addAttribute(Attribute)"})
   public void testAddAttribute_givenEntityWithType_thenEntityWithTypeAttributesSizeIsOne() {
     // Arrange
@@ -152,14 +188,16 @@ public class EntityDiffblueTest {
 
   /**
    * Test {@link Entity#addEntity(Entity)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>Then {@link Entity#Entity(String)} with {@code Type} Entities Empty.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>Then {@link Entity#Entity(String)} with {@code Type} Entities Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#addEntity(Entity)}
+   *
+   * <p>Method under test: {@link Entity#addEntity(Entity)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Entity.addEntity(Entity)"})
   public void testAddEntity_givenEntityWithType_thenEntityWithTypeEntitiesEmpty() {
     // Arrange
@@ -175,14 +213,16 @@ public class EntityDiffblueTest {
 
   /**
    * Test {@link Entity#addEntity(Entity)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity()}.</li>
-   *   <li>Then {@link Entity#Entity()} Entities size is one.</li>
+   *   <li>Given {@link Entity#Entity()}.
+   *   <li>Then {@link Entity#Entity()} Entities size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#addEntity(Entity)}
+   *
+   * <p>Method under test: {@link Entity#addEntity(Entity)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Entity.addEntity(Entity)"})
   public void testAddEntity_givenEntity_thenEntityEntitiesSizeIsOne() {
     // Arrange
@@ -200,17 +240,21 @@ public class EntityDiffblueTest {
 
   /**
    * Test {@link Entity#getEntityByType(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type} addEntity {@link Entity#Entity(String)} with type is {@code 1.0}.</li>
+   *   <li>Given {@link Entity#Entity()} addEntity {@link Entity#Entity(String)} with type is {@code
+   *       1.0}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByType(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByType(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByType(String)"})
-  public void testGetEntityByType_givenEntityWithTypeAddEntityEntityWithTypeIs10() {
+  public void testGetEntityByType_givenEntityAddEntityEntityWithTypeIs10_thenReturnNull() {
     // Arrange
-    Entity entity = new Entity("Type");
+    Entity entity = new Entity();
     entity.addEntity(new Entity("1.0"));
 
     // Act and Assert
@@ -219,81 +263,91 @@ public class EntityDiffblueTest {
 
   /**
    * Test {@link Entity#getEntityByType(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When empty string.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When empty string.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByType(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByType(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByType(String)"})
   public void testGetEntityByType_givenEntityWithType_whenEmptyString_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getEntityByType(""));
+    assertNull(new Entity("Type").getEntityByType(""));
   }
 
   /**
    * Test {@link Entity#getEntityByType(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByType(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByType(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByType(String)"})
   public void testGetEntityByType_givenEntityWithType_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getEntityByType(null));
+    assertNull(new Entity("Type").getEntityByType(null));
   }
 
   /**
    * Test {@link Entity#getEntityByType(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When {@code Type}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When {@code Type}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByType(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByType(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByType(String)"})
   public void testGetEntityByType_givenEntityWithType_whenType_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getEntityByType("Type"));
+    assertNull(new Entity("Type").getEntityByType("Type"));
   }
 
   /**
    * Test {@link Entity#getEntityByType(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity()}.</li>
-   *   <li>When {@code Type}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity()}.
+   *   <li>When {@code Type}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByType(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByType(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByType(String)"})
   public void testGetEntityByType_givenEntity_whenType_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity()).getEntityByType("Type"));
+    assertNull(new Entity().getEntityByType("Type"));
   }
 
   /**
    * Test {@link Entity#getEntityByType(String)}.
+   *
    * <ul>
-   *   <li>Then return {@link Entity#Entity(String)} with {@code Type}.</li>
+   *   <li>Then return {@link Entity#Entity(String)} with {@code Type}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByType(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByType(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByType(String)"})
   public void testGetEntityByType_thenReturnEntityWithType() {
     // Arrange
@@ -307,14 +361,17 @@ public class EntityDiffblueTest {
 
   /**
    * Test {@link Entity#getEntityByName(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type} addEntity {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type} addEntity {@link
+   *       Entity#Entity(String)} with {@code Type}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByName(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByName(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByName(String)"})
   public void testGetEntityByName_givenEntityWithTypeAddEntityEntityWithType_thenReturnNull() {
     // Arrange
@@ -327,87 +384,96 @@ public class EntityDiffblueTest {
 
   /**
    * Test {@link Entity#getEntityByName(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When empty string.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When empty string.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByName(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByName(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByName(String)"})
   public void testGetEntityByName_givenEntityWithType_whenEmptyString_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getEntityByName(""));
+    assertNull(new Entity("Type").getEntityByName(""));
   }
 
   /**
    * Test {@link Entity#getEntityByName(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When {@code Name}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When {@code Name}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByName(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByName(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByName(String)"})
   public void testGetEntityByName_givenEntityWithType_whenName_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getEntityByName("Name"));
+    assertNull(new Entity("Type").getEntityByName("Name"));
   }
 
   /**
    * Test {@link Entity#getEntityByName(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByName(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByName(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByName(String)"})
   public void testGetEntityByName_givenEntityWithType_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getEntityByName(null));
+    assertNull(new Entity("Type").getEntityByName(null));
   }
 
   /**
    * Test {@link Entity#getEntityByName(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity()}.</li>
-   *   <li>When {@code Name}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity()}.
+   *   <li>When {@code Name}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByName(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByName(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByName(String)"})
   public void testGetEntityByName_givenEntity_whenName_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity()).getEntityByName("Name"));
+    assertNull(new Entity().getEntityByName("Name"));
   }
 
   /**
    * Test {@link Entity#getEntityByName(String)}.
+   *
    * <ul>
-   *   <li>Then return {@link Entity#Entity(String, String)} with {@code Name} and {@code Type}.</li>
+   *   <li>Then return {@link Entity#Entity(String, String)} with {@code Name} and {@code Type}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getEntityByName(String)}
+   *
+   * <p>Method under test: {@link Entity#getEntityByName(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entity Entity.getEntityByName(String)"})
   public void testGetEntityByName_thenReturnEntityWithNameAndType() {
     // Arrange
     Entity entity = new Entity("Type");
     Entity entity2 = new Entity("Name", "Type");
-
     entity.addEntity(entity2);
 
     // Act and Assert
@@ -416,102 +482,117 @@ public class EntityDiffblueTest {
 
   /**
    * Test {@link Entity#getAttributeValue(String)}.
-   * <p>
-   * Method under test: {@link Entity#getAttributeValue(String)}
+   *
+   * <p>Method under test: {@link Entity#getAttributeValue(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Entity.getAttributeValue(String)"})
   public void testGetAttributeValue() {
     // Arrange
     Entity entity = new Entity("Type");
-    entity.addAttribute(new Attribute(null, "Type", "42"));
+    Attribute attribute = new Attribute("42", "Type", "42");
+    entity.addAttribute(attribute);
+    Attribute attribute2 = new Attribute("Name", "Type", "42");
+    entity.addAttribute(attribute2);
 
     // Act and Assert
-    assertNull(entity.getAttributeValue("Name"));
+    assertEquals("42", entity.getAttributeValue("Name"));
   }
 
   /**
    * Test {@link Entity#getAttributeValue(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When empty string.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When empty string.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getAttributeValue(String)}
+   *
+   * <p>Method under test: {@link Entity#getAttributeValue(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Entity.getAttributeValue(String)"})
   public void testGetAttributeValue_givenEntityWithType_whenEmptyString_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getAttributeValue(""));
+    assertNull(new Entity("Type").getAttributeValue(""));
   }
 
   /**
    * Test {@link Entity#getAttributeValue(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When {@code Name}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When {@code Name}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getAttributeValue(String)}
+   *
+   * <p>Method under test: {@link Entity#getAttributeValue(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Entity.getAttributeValue(String)"})
   public void testGetAttributeValue_givenEntityWithType_whenName_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getAttributeValue("Name"));
+    assertNull(new Entity("Type").getAttributeValue("Name"));
   }
 
   /**
    * Test {@link Entity#getAttributeValue(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.</li>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getAttributeValue(String)}
+   *
+   * <p>Method under test: {@link Entity#getAttributeValue(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Entity.getAttributeValue(String)"})
   public void testGetAttributeValue_givenEntityWithType_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity("Type")).getAttributeValue(null));
+    assertNull(new Entity("Type").getAttributeValue(null));
   }
 
   /**
    * Test {@link Entity#getAttributeValue(String)}.
+   *
    * <ul>
-   *   <li>Given {@link Entity#Entity()}.</li>
-   *   <li>When {@code Name}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Entity#Entity()}.
+   *   <li>When {@code Name}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getAttributeValue(String)}
+   *
+   * <p>Method under test: {@link Entity#getAttributeValue(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Entity.getAttributeValue(String)"})
   public void testGetAttributeValue_givenEntity_whenName_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new Entity()).getAttributeValue("Name"));
+    assertNull(new Entity().getAttributeValue("Name"));
   }
 
   /**
    * Test {@link Entity#getAttributeValue(String)}.
+   *
    * <ul>
-   *   <li>Then return {@code 42}.</li>
+   *   <li>Then return {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link Entity#getAttributeValue(String)}
+   *
+   * <p>Method under test: {@link Entity#getAttributeValue(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Entity.getAttributeValue(String)"})
   public void testGetAttributeValue_thenReturn42() {
     // Arrange
     Entity entity = new Entity("Type");
-    entity.addAttribute(new Attribute("Name", "Type", "42"));
+    Attribute attribute = new Attribute("Name", "Type", "42");
+    entity.addAttribute(attribute);
 
     // Act and Assert
     assertEquals("42", entity.getAttributeValue("Name"));

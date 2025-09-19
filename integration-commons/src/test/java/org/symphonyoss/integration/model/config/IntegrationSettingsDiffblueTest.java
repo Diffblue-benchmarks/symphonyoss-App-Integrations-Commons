@@ -3,6 +3,7 @@ package org.symphonyoss.integration.model.config;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,8 +12,9 @@ import org.junit.Test;
 public class IntegrationSettingsDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link IntegrationSettings}
    *   <li>{@link IntegrationSettings#setActive(Boolean)}
@@ -38,17 +40,30 @@ public class IntegrationSettingsDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void IntegrationSettings.<init>()", "Boolean IntegrationSettings.getActive()",
-      "String IntegrationSettings.getConfigurationId()", "Map IntegrationSettings.getData()",
-      "String IntegrationSettings.getDescription()", "Boolean IntegrationSettings.getEnabled()",
-      "String IntegrationSettings.getName()", "Long IntegrationSettings.getOwner()",
-      "String IntegrationSettings.getType()", "String IntegrationSettings.getUsername()",
-      "Boolean IntegrationSettings.getVisible()", "void IntegrationSettings.setActive(Boolean)",
-      "void IntegrationSettings.setConfigurationId(String)", "void IntegrationSettings.setData(Map)",
-      "void IntegrationSettings.setDescription(String)", "void IntegrationSettings.setEnabled(Boolean)",
-      "void IntegrationSettings.setName(String)", "void IntegrationSettings.setOwner(Long)",
-      "void IntegrationSettings.setType(String)", "void IntegrationSettings.setUsername(String)",
-      "void IntegrationSettings.setVisible(Boolean)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationSettings.<init>()",
+    "Boolean IntegrationSettings.getActive()",
+    "String IntegrationSettings.getConfigurationId()",
+    "Map IntegrationSettings.getData()",
+    "String IntegrationSettings.getDescription()",
+    "Boolean IntegrationSettings.getEnabled()",
+    "String IntegrationSettings.getName()",
+    "Long IntegrationSettings.getOwner()",
+    "String IntegrationSettings.getType()",
+    "String IntegrationSettings.getUsername()",
+    "Boolean IntegrationSettings.getVisible()",
+    "void IntegrationSettings.setActive(Boolean)",
+    "void IntegrationSettings.setConfigurationId(String)",
+    "void IntegrationSettings.setData(Map)",
+    "void IntegrationSettings.setDescription(String)",
+    "void IntegrationSettings.setEnabled(Boolean)",
+    "void IntegrationSettings.setName(String)",
+    "void IntegrationSettings.setOwner(Long)",
+    "void IntegrationSettings.setType(String)",
+    "void IntegrationSettings.setUsername(String)",
+    "void IntegrationSettings.setVisible(Boolean)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     IntegrationSettings actualIntegrationSettings = new IntegrationSettings();

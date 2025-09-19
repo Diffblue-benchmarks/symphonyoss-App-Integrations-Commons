@@ -2,23 +2,27 @@ package org.symphonyoss.integration.exception.authentication;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class ExpirationExceptionDiffblueTest {
   /**
    * Test {@link ExpirationException#ExpirationException(String, Throwable, String[])}.
-   * <p>
-   * Method under test: {@link ExpirationException#ExpirationException(String, Throwable, String[])}
+   *
+   * <p>Method under test: {@link ExpirationException#ExpirationException(String, Throwable,
+   * String[])}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExpirationException.<init>(String, Throwable, String[])"})
   public void testNewExpirationException() {
     // Arrange
     Throwable e = new Throwable();
 
     // Act
-    ExpirationException actualExpirationException = new ExpirationException("An error occurred", e, "Solutions");
+    ExpirationException actualExpirationException =
+        new ExpirationException("An error occurred", e, "Solutions");
 
     // Assert
     assertEquals(

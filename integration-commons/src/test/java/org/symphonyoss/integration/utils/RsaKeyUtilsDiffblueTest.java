@@ -1,6 +1,7 @@
 package org.symphonyoss.integration.utils;
 
 import static org.junit.Assert.assertEquals;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.security.PublicKey;
 import org.junit.Rule;
@@ -17,26 +18,26 @@ import org.symphonyoss.integration.logging.LogMessageSource;
 @ContextConfiguration(classes = {RsaKeyUtils.class})
 @RunWith(SpringJUnit4ClassRunner.class)
 public class RsaKeyUtilsDiffblueTest {
-  @Rule
-  public ExpectedException thrown = ExpectedException.none();
+  @MockBean private LogMessageSource logMessageSource;
 
-  @MockBean
-  private LogMessageSource logMessageSource;
+  @Autowired private RsaKeyUtils rsaKeyUtils;
 
-  @Autowired
-  private RsaKeyUtils rsaKeyUtils;
+  @Rule public ExpectedException thrown = ExpectedException.none();
 
   /**
    * Test {@link RsaKeyUtils#getPrivateKey(String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
+   *   <li>When empty string.
+   *   <li>Then throw {@link UnexpectedAuthException}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.security.PrivateKey RsaKeyUtils.getPrivateKey(String)"})
-  public void testGetPrivateKey_whenEmptyString() {
+  public void testGetPrivateKey_whenEmptyString_thenThrowUnexpectedAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnexpectedAuthException.class);
     rsaKeyUtils.getPrivateKey("");
@@ -44,13 +45,15 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPrivateKey(String)}.
+   *
    * <ul>
-   *   <li>When {@code integration.authorization.invalid.privatekey}.</li>
+   *   <li>When {@code integration.authorization.invalid.privatekey}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.security.PrivateKey RsaKeyUtils.getPrivateKey(String)"})
   public void testGetPrivateKey_whenIntegrationAuthorizationInvalidPrivatekey() {
     // Arrange, Act and Assert
@@ -60,15 +63,18 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPrivateKey(String)}.
+   *
    * <ul>
-   *   <li>When lf.</li>
+   *   <li>When lf.
+   *   <li>Then throw {@link UnexpectedAuthException}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.security.PrivateKey RsaKeyUtils.getPrivateKey(String)"})
-  public void testGetPrivateKey_whenLf() {
+  public void testGetPrivateKey_whenLf_thenThrowUnexpectedAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnexpectedAuthException.class);
     rsaKeyUtils.getPrivateKey("\n");
@@ -76,15 +82,18 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPrivateKey(String)}.
+   *
    * <ul>
-   *   <li>When {@code Private Key}.</li>
+   *   <li>When {@code Private Key}.
+   *   <li>Then throw {@link UnexpectedAuthException}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.security.PrivateKey RsaKeyUtils.getPrivateKey(String)"})
-  public void testGetPrivateKey_whenPrivateKey() {
+  public void testGetPrivateKey_whenPrivateKey_thenThrowUnexpectedAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnexpectedAuthException.class);
     rsaKeyUtils.getPrivateKey("Private Key");
@@ -92,15 +101,18 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPrivateKey(String)}.
+   *
    * <ul>
-   *   <li>When {@code RSA}.</li>
+   *   <li>When {@code RSA}.
+   *   <li>Then throw {@link UnexpectedAuthException}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPrivateKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.security.PrivateKey RsaKeyUtils.getPrivateKey(String)"})
-  public void testGetPrivateKey_whenRsa() {
+  public void testGetPrivateKey_whenRsa_thenThrowUnexpectedAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnexpectedAuthException.class);
     rsaKeyUtils.getPrivateKey("RSA");
@@ -108,15 +120,18 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKey(String)}.
+   *
    * <ul>
-   *   <li>When {@code 42}.</li>
+   *   <li>When {@code 42}.
+   *   <li>Then throw {@link UnexpectedAuthException}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKey(String)"})
-  public void testGetPublicKey_when42() {
+  public void testGetPublicKey_when42_thenThrowUnexpectedAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnexpectedAuthException.class);
     rsaKeyUtils.getPublicKey("42");
@@ -124,15 +139,18 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKey(String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
+   *   <li>When empty string.
+   *   <li>Then throw {@link UnexpectedAuthException}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKey(String)"})
-  public void testGetPublicKey_whenEmptyString() {
+  public void testGetPublicKey_whenEmptyString_thenThrowUnexpectedAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnexpectedAuthException.class);
     rsaKeyUtils.getPublicKey("");
@@ -140,13 +158,15 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKey(String)}.
+   *
    * <ul>
-   *   <li>When {@code integration.authorization.invalid.publickey}.</li>
+   *   <li>When {@code integration.authorization.invalid.publickey}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKey(String)"})
   public void testGetPublicKey_whenIntegrationAuthorizationInvalidPublickey() {
     // Arrange, Act and Assert
@@ -156,15 +176,18 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKey(String)}.
+   *
    * <ul>
-   *   <li>When {@code Public Key}.</li>
+   *   <li>When {@code Public Key}.
+   *   <li>Then throw {@link UnexpectedAuthException}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKey(String)"})
-  public void testGetPublicKey_whenPublicKey() {
+  public void testGetPublicKey_whenPublicKey_thenThrowUnexpectedAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnexpectedAuthException.class);
     rsaKeyUtils.getPublicKey("Public Key");
@@ -172,15 +195,18 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKey(String)}.
+   *
    * <ul>
-   *   <li>When {@code RSA}.</li>
+   *   <li>When {@code RSA}.
+   *   <li>Then throw {@link UnexpectedAuthException}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKey(String)"})
-  public void testGetPublicKey_whenRsa() {
+  public void testGetPublicKey_whenRsa_thenThrowUnexpectedAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnexpectedAuthException.class);
     rsaKeyUtils.getPublicKey("RSA");
@@ -188,10 +214,11 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#trimPrivateKey(String)}.
-   * <p>
-   * Method under test: {@link RsaKeyUtils#trimPrivateKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#trimPrivateKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String RsaKeyUtils.trimPrivateKey(String)"})
   public void testTrimPrivateKey() {
     // Arrange, Act and Assert
@@ -200,10 +227,11 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#trimPublicKey(String)}.
-   * <p>
-   * Method under test: {@link RsaKeyUtils#trimPublicKey(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#trimPublicKey(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String RsaKeyUtils.trimPublicKey(String)"})
   public void testTrimPublicKey() {
     // Arrange, Act and Assert
@@ -212,13 +240,15 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}.
+   *
    * <ul>
-   *   <li>When {@code -----BEGIN CERTIFICATE-----}.</li>
+   *   <li>When {@code -----BEGIN CERTIFICATE-----}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKeyFromCertificate(String)"})
   public void testGetPublicKeyFromCertificate_whenBeginCertificate() {
     // Arrange, Act and Assert
@@ -228,13 +258,15 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}.
+   *
    * <ul>
-   *   <li>When {@code Certificate}.</li>
+   *   <li>When {@code Certificate}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKeyFromCertificate(String)"})
   public void testGetPublicKeyFromCertificate_whenCertificate() {
     // Arrange, Act and Assert
@@ -244,13 +276,15 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}.
+   *
    * <ul>
-   *   <li>When {@code Component:}.</li>
+   *   <li>When {@code Component:}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKeyFromCertificate(String)"})
   public void testGetPublicKeyFromCertificate_whenComponent() {
     // Arrange, Act and Assert
@@ -260,13 +294,15 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}.
+   *
    * <ul>
-   *   <li>When {@code integration.authorization.invalid.certificate}.</li>
+   *   <li>When {@code integration.authorization.invalid.certificate}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKeyFromCertificate(String)"})
   public void testGetPublicKeyFromCertificate_whenIntegrationAuthorizationInvalidCertificate() {
     // Arrange, Act and Assert
@@ -276,13 +312,15 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}.
+   *
    * <ul>
-   *   <li>When {@code X.509}.</li>
+   *   <li>When {@code X.509}.
    * </ul>
-   * <p>
-   * Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#getPublicKeyFromCertificate(String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"PublicKey RsaKeyUtils.getPublicKeyFromCertificate(String)"})
   public void testGetPublicKeyFromCertificate_whenX509() {
     // Arrange, Act and Assert
@@ -292,10 +330,11 @@ public class RsaKeyUtilsDiffblueTest {
 
   /**
    * Test {@link RsaKeyUtils#parsePublicKey(PublicKey)}.
-   * <p>
-   * Method under test: {@link RsaKeyUtils#parsePublicKey(PublicKey)}
+   *
+   * <p>Method under test: {@link RsaKeyUtils#parsePublicKey(PublicKey)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"String RsaKeyUtils.parsePublicKey(PublicKey)"})
   public void testParsePublicKey() {
     // Arrange, Act and Assert

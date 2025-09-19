@@ -3,6 +3,7 @@ package org.symphonyoss.integration.webhook.parser.metadata;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +12,9 @@ import org.junit.Test;
 public class MetadataObjectDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link MetadataObject}
    *   <li>{@link MetadataObject#setChildren(List)}
@@ -31,12 +33,23 @@ public class MetadataObjectDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void MetadataObject.<init>()", "List MetadataObject.getChildren()",
-      "List MetadataObject.getFields()", "String MetadataObject.getId()", "String MetadataObject.getType()",
-      "String MetadataObject.getVersion()", "boolean MetadataObject.isList()", "void MetadataObject.setChildren(List)",
-      "void MetadataObject.setFields(List)", "void MetadataObject.setId(String)",
-      "void MetadataObject.setList(boolean)", "void MetadataObject.setType(String)",
-      "void MetadataObject.setVersion(String)", "String MetadataObject.toString()"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void MetadataObject.<init>()",
+    "List MetadataObject.getChildren()",
+    "List MetadataObject.getFields()",
+    "String MetadataObject.getId()",
+    "String MetadataObject.getType()",
+    "String MetadataObject.getVersion()",
+    "boolean MetadataObject.isList()",
+    "void MetadataObject.setChildren(List)",
+    "void MetadataObject.setFields(List)",
+    "void MetadataObject.setId(String)",
+    "void MetadataObject.setList(boolean)",
+    "void MetadataObject.setType(String)",
+    "void MetadataObject.setVersion(String)",
+    "String MetadataObject.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     MetadataObject actualMetadataObject = new MetadataObject();
@@ -59,7 +72,8 @@ public class MetadataObjectDiffblueTest {
     // Assert
     assertEquals("1.0.2", actualVersion);
     assertEquals("42", actualId);
-    assertEquals("MetadataObject{id='42', type='Type', version='1.0.2', list='true', fields=[], children=[]}",
+    assertEquals(
+        "MetadataObject{id='42', type='Type', version='1.0.2', list='true', fields=[], children=[]}",
         actualToStringResult);
     assertEquals("Type", actualType);
     assertTrue(actualChildren.isEmpty());

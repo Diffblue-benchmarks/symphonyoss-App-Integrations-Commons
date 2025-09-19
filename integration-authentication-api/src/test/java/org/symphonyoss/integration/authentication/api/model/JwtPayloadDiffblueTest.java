@@ -4,14 +4,16 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class JwtPayloadDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link JwtPayload#JwtPayload()}
    *   <li>{@link JwtPayload#setApplicationId(String)}
@@ -27,12 +29,21 @@ public class JwtPayloadDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void JwtPayload.<init>()", "void JwtPayload.<init>(String, String, String, Long, JwtUser)",
-      "String JwtPayload.getApplicationId()", "String JwtPayload.getCompanyName()",
-      "Long JwtPayload.getExpirationDateInSeconds()", "JwtUser JwtPayload.getUser()", "String JwtPayload.getUserId()",
-      "void JwtPayload.setApplicationId(String)", "void JwtPayload.setCompanyName(String)",
-      "void JwtPayload.setExpirationDateInSeconds(Long)", "void JwtPayload.setUser(JwtUser)",
-      "void JwtPayload.setUserId(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void JwtPayload.<init>()",
+    "void JwtPayload.<init>(String, String, String, Long, JwtUser)",
+    "String JwtPayload.getApplicationId()",
+    "String JwtPayload.getCompanyName()",
+    "Long JwtPayload.getExpirationDateInSeconds()",
+    "JwtUser JwtPayload.getUser()",
+    "String JwtPayload.getUserId()",
+    "void JwtPayload.setApplicationId(String)",
+    "void JwtPayload.setCompanyName(String)",
+    "void JwtPayload.setExpirationDateInSeconds(Long)",
+    "void JwtPayload.setUser(JwtUser)",
+    "void JwtPayload.setUserId(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     JwtPayload actualJwtPayload = new JwtPayload();
@@ -69,12 +80,14 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>Given {@code https://example.org/example}.</li>
-   *   <li>When {@code 42}.</li>
+   *   <li>Given {@code https://example.org/example}.
+   *   <li>When {@code 42}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link JwtPayload#JwtPayload(String, String, String, Long, JwtUser)}
    *   <li>{@link JwtPayload#setApplicationId(String)}
@@ -90,12 +103,21 @@ public class JwtPayloadDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void JwtPayload.<init>()", "void JwtPayload.<init>(String, String, String, Long, JwtUser)",
-      "String JwtPayload.getApplicationId()", "String JwtPayload.getCompanyName()",
-      "Long JwtPayload.getExpirationDateInSeconds()", "JwtUser JwtPayload.getUser()", "String JwtPayload.getUserId()",
-      "void JwtPayload.setApplicationId(String)", "void JwtPayload.setCompanyName(String)",
-      "void JwtPayload.setExpirationDateInSeconds(Long)", "void JwtPayload.setUser(JwtUser)",
-      "void JwtPayload.setUserId(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void JwtPayload.<init>()",
+    "void JwtPayload.<init>(String, String, String, Long, JwtUser)",
+    "String JwtPayload.getApplicationId()",
+    "String JwtPayload.getCompanyName()",
+    "Long JwtPayload.getExpirationDateInSeconds()",
+    "JwtUser JwtPayload.getUser()",
+    "String JwtPayload.getUserId()",
+    "void JwtPayload.setApplicationId(String)",
+    "void JwtPayload.setCompanyName(String)",
+    "void JwtPayload.setExpirationDateInSeconds(Long)",
+    "void JwtPayload.setUser(JwtUser)",
+    "void JwtPayload.setUserId(String)"
+  })
   public void testGettersAndSetters_givenHttpsExampleOrgExample_when42() {
     // Arrange
     JwtUser user = new JwtUser();
@@ -147,18 +169,28 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#getExpirationDate()}.
-   * <ul>
-   *   <li>Given {@link JwtPayload#JwtPayload()} ExpirationDateInSeconds is zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#getExpirationDate()}
+   *
+   * <p>Method under test: {@link JwtPayload#getExpirationDate()}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Date JwtPayload.getExpirationDate()"})
-  public void testGetExpirationDate_givenJwtPayloadExpirationDateInSecondsIsZero() {
+  public void testGetExpirationDate() {
     // Arrange
-    JwtPayload jwtPayload = new JwtPayload();
-    jwtPayload.setExpirationDateInSeconds(0L);
+    JwtUser user = new JwtUser();
+    user.setAvatarSmallUrl("https://example.org/example");
+    user.setAvatarUrl("https://example.org/example");
+    user.setCompany("Company");
+    user.setCompanyId("42");
+    user.setDisplayName("Display Name");
+    user.setEmailAddress("42 Main St");
+    user.setFirstName("Jane");
+    user.setId("42");
+    user.setLastName("Doe");
+    user.setLocation("Location");
+    user.setTitle("Dr");
+    user.setUsername("janedoe");
+    JwtPayload jwtPayload = new JwtPayload("42", "Company Name", "42", 0L, user);
 
     // Act and Assert
     assertNull(jwtPayload.getExpirationDate());
@@ -166,34 +198,39 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#getExpirationDate()}.
+   *
    * <ul>
-   *   <li>Given {@link JwtPayload#JwtPayload()}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link JwtPayload#JwtPayload()}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#getExpirationDate()}
+   *
+   * <p>Method under test: {@link JwtPayload#getExpirationDate()}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Date JwtPayload.getExpirationDate()"})
   public void testGetExpirationDate_givenJwtPayload_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new JwtPayload()).getExpirationDate());
+    assertNull(new JwtPayload().getExpirationDate());
   }
 
   /**
    * Test {@link JwtPayload#equals(Object)}, and {@link JwtPayload#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link JwtPayload#equals(Object)}
    *   <li>{@link JwtPayload#hashCode()}
    * </ul>
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -202,24 +239,26 @@ public class JwtPayloadDiffblueTest {
 
     // Act and Assert
     assertEquals(jwtPayload, jwtPayload2);
-    int expectedHashCodeResult = jwtPayload.hashCode();
-    assertEquals(expectedHashCodeResult, jwtPayload2.hashCode());
+    assertEquals(jwtPayload.hashCode(), jwtPayload2.hashCode());
   }
 
   /**
    * Test {@link JwtPayload#equals(Object)}, and {@link JwtPayload#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link JwtPayload#equals(Object)}
    *   <li>{@link JwtPayload#hashCode()}
    * </ul>
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -233,18 +272,33 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtPayload#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
-    JwtPayload jwtPayload = new JwtPayload("42", "Company Name", "42", 1L, new JwtUser());
+    JwtUser user = new JwtUser();
+    user.setAvatarSmallUrl("https://example.org/example");
+    user.setAvatarUrl("https://example.org/example");
+    user.setCompany("Company");
+    user.setCompanyId("42");
+    user.setDisplayName("Display Name");
+    user.setEmailAddress("42 Main St");
+    user.setFirstName("Jane");
+    user.setId("42");
+    user.setLastName("Doe");
+    user.setLocation("Location");
+    user.setTitle("Dr");
+    user.setUsername("janedoe");
+    JwtPayload jwtPayload = new JwtPayload("42", "Company Name", "42", 1L, user);
 
     // Act and Assert
     assertNotEquals(jwtPayload, new JwtPayload());
@@ -252,14 +306,16 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtPayload#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -272,14 +328,16 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtPayload#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
@@ -292,14 +350,16 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtPayload#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
@@ -312,14 +372,16 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtPayload#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
@@ -346,14 +408,16 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtPayload#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -362,14 +426,16 @@ public class JwtPayloadDiffblueTest {
 
   /**
    * Test {@link JwtPayload#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link JwtPayload#equals(Object)}
+   *
+   * <p>Method under test: {@link JwtPayload#equals(Object)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JwtPayload.equals(Object)", "int JwtPayload.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert

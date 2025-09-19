@@ -1,14 +1,16 @@
 package org.symphonyoss.integration.model;
 
 import static org.junit.Assert.assertEquals;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class UserKeyManagerDataDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link UserKeyManagerData}
    *   <li>{@link UserKeyManagerData#setCertificate(String)}
@@ -28,14 +30,24 @@ public class UserKeyManagerDataDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void UserKeyManagerData.<init>()", "String UserKeyManagerData.getCertificate()",
-      "String UserKeyManagerData.getPrivateKey()", "String UserKeyManagerData.getPrivateKeySignature()",
-      "String UserKeyManagerData.getPublicKey()", "String UserKeyManagerData.getPublicKeySignature()",
-      "String UserKeyManagerData.getStatus()", "Long UserKeyManagerData.getUserId()",
-      "void UserKeyManagerData.setCertificate(String)", "void UserKeyManagerData.setPrivateKey(String)",
-      "void UserKeyManagerData.setPrivateKeySignature(String)", "void UserKeyManagerData.setPublicKey(String)",
-      "void UserKeyManagerData.setPublicKeySignature(String)", "void UserKeyManagerData.setStatus(String)",
-      "void UserKeyManagerData.setUserId(Long)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void UserKeyManagerData.<init>()",
+    "String UserKeyManagerData.getCertificate()",
+    "String UserKeyManagerData.getPrivateKey()",
+    "String UserKeyManagerData.getPrivateKeySignature()",
+    "String UserKeyManagerData.getPublicKey()",
+    "String UserKeyManagerData.getPublicKeySignature()",
+    "String UserKeyManagerData.getStatus()",
+    "Long UserKeyManagerData.getUserId()",
+    "void UserKeyManagerData.setCertificate(String)",
+    "void UserKeyManagerData.setPrivateKey(String)",
+    "void UserKeyManagerData.setPrivateKeySignature(String)",
+    "void UserKeyManagerData.setPublicKey(String)",
+    "void UserKeyManagerData.setPublicKeySignature(String)",
+    "void UserKeyManagerData.setStatus(String)",
+    "void UserKeyManagerData.setUserId(Long)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     UserKeyManagerData actualUserKeyManagerData = new UserKeyManagerData();

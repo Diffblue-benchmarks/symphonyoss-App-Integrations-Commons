@@ -1,14 +1,16 @@
 package org.symphonyoss.integration.model.yaml;
 
 import static org.junit.Assert.assertEquals;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class AdminUserDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link AdminUser}
    *   <li>{@link AdminUser#setKeystoreFile(String)}
@@ -18,9 +20,14 @@ public class AdminUserDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void AdminUser.<init>()", "String AdminUser.getKeystoreFile()",
-      "String AdminUser.getKeystorePassword()", "void AdminUser.setKeystoreFile(String)",
-      "void AdminUser.setKeystorePassword(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void AdminUser.<init>()",
+    "String AdminUser.getKeystoreFile()",
+    "String AdminUser.getKeystorePassword()",
+    "void AdminUser.setKeystoreFile(String)",
+    "void AdminUser.setKeystorePassword(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     AdminUser actualAdminUser = new AdminUser();

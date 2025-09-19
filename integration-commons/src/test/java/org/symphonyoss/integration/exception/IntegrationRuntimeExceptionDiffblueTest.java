@@ -3,139 +3,182 @@ package org.symphonyoss.integration.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class IntegrationRuntimeExceptionDiffblueTest {
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}.
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable,
+   * String[])}.
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable, String[])}
    */
   @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"
+  })
   public void testNewIntegrationRuntimeException() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", cause, "Solutions");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", cause, "Solutions");
 
     // Assert
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \nSolutions\nStack trace: \n",
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \nSolutions\nStack trace: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \nSolutions\nStack trace: \n",
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \nSolutions\nStack trace: \n",
         actualIntegrationRuntimeException.getMessage());
     assertSame(cause, actualIntegrationRuntimeException.getCause());
   }
 
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}.
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable,
+   * String[])}.
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable, String[])}
    */
   @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"
+  })
   public void testNewIntegrationRuntimeException2() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("",
-        "An error occurred", cause, "Solutions");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException(
+            "Component", "An error occurred", cause, "\n", "Component: ");
 
     // Assert
-    assertEquals("\nComponent: Unknown\nMessage: An error occurred\nSolutions: \nSolutions\nStack trace: \n",
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n\nComponent: \nStack trace: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals("\nComponent: Unknown\nMessage: An error occurred\nSolutions: \nSolutions\nStack trace: \n",
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n\nComponent: \nStack trace: \n",
         actualIntegrationRuntimeException.getMessage());
     assertSame(cause, actualIntegrationRuntimeException.getCause());
   }
 
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}.
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable,
+   * String[])}.
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable, String[])}
    */
   @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"
+  })
   public void testNewIntegrationRuntimeException3() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", cause, "");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("", "An error occurred", cause, "Solutions");
 
     // Assert
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \n\nStack trace: \n",
+    assertEquals(
+        "\nComponent: Unknown\nMessage: An error occurred\nSolutions: \nSolutions\nStack trace: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \n\nStack trace: \n",
+    assertEquals(
+        "\nComponent: Unknown\nMessage: An error occurred\nSolutions: \nSolutions\nStack trace: \n",
         actualIntegrationRuntimeException.getMessage());
     assertSame(cause, actualIntegrationRuntimeException.getCause());
   }
 
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}.
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable,
+   * String[])}.
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable, String[])}
    */
   @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"
+  })
   public void testNewIntegrationRuntimeException4() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", cause, "\n", "Component: ");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "", cause, "Solutions");
 
     // Assert
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n\nComponent: \nStack trace: \n",
+    assertEquals(
+        "\nComponent: Component\nMessage: None\nSolutions: \nSolutions\nStack trace: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n\nComponent: \nStack trace: \n",
+    assertEquals(
+        "\nComponent: Component\nMessage: None\nSolutions: \nSolutions\nStack trace: \n",
+        actualIntegrationRuntimeException.getMessage());
+    assertSame(cause, actualIntegrationRuntimeException.getCause());
+  }
+
+  /**
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable,
+   * String[])}.
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable, String[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"
+  })
+  public void testNewIntegrationRuntimeException5() {
+    // Arrange
+    Throwable cause = new Throwable();
+
+    // Act
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", cause, "");
+
+    // Assert
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \n\nStack trace: \n",
+        actualIntegrationRuntimeException.getLocalizedMessage());
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \n\nStack trace: \n",
         actualIntegrationRuntimeException.getMessage());
     assertSame(cause, actualIntegrationRuntimeException.getCause());
   }
 
   /**
    * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}.
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, String[])}
    */
   @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, String[])"})
-  public void testNewIntegrationRuntimeException5() {
-    // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", "Solutions");
-
-    // Assert
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \nSolutions\n",
-        actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \nSolutions\n",
-        actualIntegrationRuntimeException.getMessage());
-    assertNull(actualIntegrationRuntimeException.getCause());
-    assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
-  }
-
-  /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}.
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}
-   */
-  @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, String[])"})
   public void testNewIntegrationRuntimeException6() {
     // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("",
-        "An error occurred", "Solutions");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", "Solutions");
 
     // Assert
-    assertEquals("\nComponent: Unknown\nMessage: An error occurred\nSolutions: \nSolutions\n",
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \nSolutions\n",
         actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals("\nComponent: Unknown\nMessage: An error occurred\nSolutions: \nSolutions\n",
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \nSolutions\n",
         actualIntegrationRuntimeException.getMessage());
     assertNull(actualIntegrationRuntimeException.getCause());
     assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
@@ -143,20 +186,24 @@ public class IntegrationRuntimeExceptionDiffblueTest {
 
   /**
    * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}.
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, String[])}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, String[])"})
   public void testNewIntegrationRuntimeException7() {
     // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", "");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", "\n", "Component: ");
 
     // Assert
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n",
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n\nComponent: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n",
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n\nComponent: \n",
         actualIntegrationRuntimeException.getMessage());
     assertNull(actualIntegrationRuntimeException.getCause());
     assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
@@ -164,77 +211,154 @@ public class IntegrationRuntimeExceptionDiffblueTest {
 
   /**
    * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}.
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, String[])}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, String[])"})
   public void testNewIntegrationRuntimeException8() {
     // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", "\n", "Component: ");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("", "An error occurred", "Solutions");
 
     // Assert
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n\nComponent: \n",
+    assertEquals(
+        "\nComponent: Unknown\nMessage: An error occurred\nSolutions: \nSolutions\n",
         actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals("\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n\nComponent: \n",
+    assertEquals(
+        "\nComponent: Unknown\nMessage: An error occurred\nSolutions: \nSolutions\n",
         actualIntegrationRuntimeException.getMessage());
     assertNull(actualIntegrationRuntimeException.getCause());
     assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
   }
 
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}.
-   * <ul>
-   *   <li>Then return LocalizedMessage is a string.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}.
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, String[])}
    */
   @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, String[])"})
+  public void testNewIntegrationRuntimeException9() {
+    // Arrange and Act
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "", "Solutions");
+
+    // Assert
+    assertEquals(
+        "\nComponent: Component\nMessage: None\nSolutions: \nSolutions\n",
+        actualIntegrationRuntimeException.getLocalizedMessage());
+    assertEquals(
+        "\nComponent: Component\nMessage: None\nSolutions: \nSolutions\n",
+        actualIntegrationRuntimeException.getMessage());
+    assertNull(actualIntegrationRuntimeException.getCause());
+    assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
+  }
+
+  /**
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}.
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, String[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, String[])"})
+  public void testNewIntegrationRuntimeException10() {
+    // Arrange and Act
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", "");
+
+    // Assert
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n",
+        actualIntegrationRuntimeException.getLocalizedMessage());
+    assertEquals(
+        "\nComponent: Component\nMessage: An error occurred\nSolutions: \n\n",
+        actualIntegrationRuntimeException.getMessage());
+    assertNull(actualIntegrationRuntimeException.getCause());
+    assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
+  }
+
+  /**
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable,
+   * String[])}.
+   *
+   * <ul>
+   *   <li>Then return LocalizedMessage is a string.
+   * </ul>
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable, String[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"
+  })
   public void testNewIntegrationRuntimeException_thenReturnLocalizedMessageIsAString() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", cause, new String[]{});
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", cause, new String[] {});
 
     // Assert
     assertEquals(
-        "\n" + "Component: Component\n" + "Message: An error occurred\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n" + "Stack trace: \n",
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Component\n" + "Message: An error occurred\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n" + "Stack trace: \n",
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualIntegrationRuntimeException.getMessage());
     assertSame(cause, actualIntegrationRuntimeException.getCause());
   }
 
   /**
    * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}.
+   *
    * <ul>
-   *   <li>Then return LocalizedMessage is a string.</li>
+   *   <li>Then return LocalizedMessage is a string.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, String[])}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, String[])"})
   public void testNewIntegrationRuntimeException_thenReturnLocalizedMessageIsAString2() {
     // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", new String[]{});
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", new String[] {});
 
     // Assert
     assertEquals(
-        "\n" + "Component: Component\n" + "Message: An error occurred\n" + "Solutions: \n"
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualIntegrationRuntimeException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Component\n" + "Message: An error occurred\n" + "Solutions: \n"
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualIntegrationRuntimeException.getMessage());
     assertNull(actualIntegrationRuntimeException.getCause());
@@ -243,26 +367,35 @@ public class IntegrationRuntimeExceptionDiffblueTest {
 
   /**
    * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String)}.
+   *
    * <ul>
-   *   <li>When {@code Component}.</li>
+   *   <li>When {@code Component}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String)}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String)"})
   public void testNewIntegrationRuntimeException_whenComponent() {
     // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred");
 
     // Assert
     assertEquals(
-        "\n" + "Component: Component\n" + "Message: An error occurred\n" + "Solutions: \n"
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualIntegrationRuntimeException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Component\n" + "Message: An error occurred\n" + "Solutions: \n"
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualIntegrationRuntimeException.getMessage());
     assertNull(actualIntegrationRuntimeException.getCause());
@@ -270,58 +403,116 @@ public class IntegrationRuntimeExceptionDiffblueTest {
   }
 
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable)}.
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String)}.
+   *
    * <ul>
-   *   <li>When {@code Component}.</li>
-   *   <li>Then return Cause is {@link Throwable#Throwable()}.</li>
+   *   <li>When {@code Component}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable)}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String)}
    */
   @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String)"})
+  public void testNewIntegrationRuntimeException_whenComponent2() {
+    // Arrange and Act
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "");
+
+    // Assert
+    assertEquals(
+        "\n"
+            + "Component: Component\n"
+            + "Message: None\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n",
+        actualIntegrationRuntimeException.getLocalizedMessage());
+    assertEquals(
+        "\n"
+            + "Component: Component\n"
+            + "Message: None\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n",
+        actualIntegrationRuntimeException.getMessage());
+    assertNull(actualIntegrationRuntimeException.getCause());
+    assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
+  }
+
+  /**
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String,
+   * Throwable)}.
+   *
+   * <ul>
+   *   <li>When {@code Component}.
+   *   <li>Then return Cause is {@link Throwable#Throwable()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable)}
+   */
+  @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable)"})
   public void testNewIntegrationRuntimeException_whenComponent_thenReturnCauseIsThrowable() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("Component",
-        "An error occurred", cause);
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", cause);
 
     // Assert
     assertEquals(
-        "\n" + "Component: Component\n" + "Message: An error occurred\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n" + "Stack trace: \n",
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Component\n" + "Message: An error occurred\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n" + "Stack trace: \n",
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualIntegrationRuntimeException.getMessage());
     assertSame(cause, actualIntegrationRuntimeException.getCause());
   }
 
   /**
    * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
+   *   <li>When empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String)}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String)"})
   public void testNewIntegrationRuntimeException_whenEmptyString() {
     // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("",
-        "An error occurred");
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("", "An error occurred");
 
     // Assert
     assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: An error occurred\n" + "Solutions: \n"
+        "\n"
+            + "Component: Unknown\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualIntegrationRuntimeException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: An error occurred\n" + "Solutions: \n"
+        "\n"
+            + "Component: Unknown\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualIntegrationRuntimeException.getMessage());
     assertNull(actualIntegrationRuntimeException.getCause());
@@ -329,144 +520,124 @@ public class IntegrationRuntimeExceptionDiffblueTest {
   }
 
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable)}.
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String,
+   * Throwable)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
-   *   <li>Then return Cause is {@link Throwable#Throwable()}.</li>
+   *   <li>When empty string.
+   *   <li>Then return Cause is {@link Throwable#Throwable()}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable)}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable)"})
   public void testNewIntegrationRuntimeException_whenEmptyString_thenReturnCauseIsThrowable() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException("",
-        "An error occurred", cause);
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("", "An error occurred", cause);
 
     // Assert
     assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: An error occurred\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n" + "Stack trace: \n",
+        "\n"
+            + "Component: Unknown\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: An error occurred\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n" + "Stack trace: \n",
+        "\n"
+            + "Component: Unknown\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualIntegrationRuntimeException.getMessage());
     assertSame(cause, actualIntegrationRuntimeException.getCause());
   }
 
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String)}.
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String,
+   * Throwable)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When empty string.
+   *   <li>Then return Cause is {@link Throwable#Throwable()}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String)}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable)}
    */
   @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String)"})
-  public void testNewIntegrationRuntimeException_whenNull() {
-    // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException(null, null);
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable)"})
+  public void testNewIntegrationRuntimeException_whenEmptyString_thenReturnCauseIsThrowable2() {
+    // Arrange
+    Throwable cause = new Throwable();
+
+    // Act
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "", cause);
 
     // Assert
     assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: None\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n",
+        "\n"
+            + "Component: Component\n"
+            + "Message: None\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualIntegrationRuntimeException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: None\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n",
+        "\n"
+            + "Component: Component\n"
+            + "Message: None\n"
+            + "Solutions: \n"
+            + "No solution has been cataloged for troubleshooting this problem.\n"
+            + "Stack trace: \n",
         actualIntegrationRuntimeException.getMessage());
-    assertNull(actualIntegrationRuntimeException.getCause());
-    assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
+    assertSame(cause, actualIntegrationRuntimeException.getCause());
   }
 
   /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable)}.
+   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String,
+   * Throwable)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Cause is {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return Cause is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable)}
+   *
+   * <p>Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String,
+   * String, Throwable)}
    */
   @Test
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable)"})
   public void testNewIntegrationRuntimeException_whenNull_thenReturnCauseIsNull() {
     // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException(null, null,
-        (Throwable) null);
+    IntegrationRuntimeException actualIntegrationRuntimeException =
+        new IntegrationRuntimeException("Component", "An error occurred", (Throwable) null);
 
     // Assert
     assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: None\n" + "Solutions: \n"
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualIntegrationRuntimeException.getLocalizedMessage());
     assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: None\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n",
-        actualIntegrationRuntimeException.getMessage());
-    assertNull(actualIntegrationRuntimeException.getCause());
-    assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
-  }
-
-  /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}.
-   * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Cause is {@code null}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, Throwable, String[])}
-   */
-  @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, Throwable, String[])"})
-  public void testNewIntegrationRuntimeException_whenNull_thenReturnCauseIsNull2() {
-    // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException(null, null, null,
-        null);
-
-    // Assert
-    assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: None\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n",
-        actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: None\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n",
-        actualIntegrationRuntimeException.getMessage());
-    assertNull(actualIntegrationRuntimeException.getCause());
-    assertEquals(0, actualIntegrationRuntimeException.getSuppressed().length);
-  }
-
-  /**
-   * Test {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}.
-   * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return LocalizedMessage is a string.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IntegrationRuntimeException#IntegrationRuntimeException(String, String, String[])}
-   */
-  @Test
-  @MethodsUnderTest({"void IntegrationRuntimeException.<init>(String, String, String[])"})
-  public void testNewIntegrationRuntimeException_whenNull_thenReturnLocalizedMessageIsAString() {
-    // Arrange and Act
-    IntegrationRuntimeException actualIntegrationRuntimeException = new IntegrationRuntimeException(null, null,
-        (String[]) null);
-
-    // Assert
-    assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: None\n" + "Solutions: \n"
-            + "No solution has been cataloged for troubleshooting this problem.\n",
-        actualIntegrationRuntimeException.getLocalizedMessage());
-    assertEquals(
-        "\n" + "Component: Unknown\n" + "Message: None\n" + "Solutions: \n"
+        "\n"
+            + "Component: Component\n"
+            + "Message: An error occurred\n"
+            + "Solutions: \n"
             + "No solution has been cataloged for troubleshooting this problem.\n",
         actualIntegrationRuntimeException.getMessage());
     assertNull(actualIntegrationRuntimeException.getCause());

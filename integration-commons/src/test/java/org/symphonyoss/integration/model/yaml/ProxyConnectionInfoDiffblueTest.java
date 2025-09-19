@@ -1,14 +1,16 @@
 package org.symphonyoss.integration.model.yaml;
 
 import static org.junit.Assert.assertEquals;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class ProxyConnectionInfoDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link ProxyConnectionInfo}
    *   <li>{@link ProxyConnectionInfo#setPassword(String)}
@@ -21,10 +23,17 @@ public class ProxyConnectionInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void ProxyConnectionInfo.<init>()", "String ProxyConnectionInfo.getPassword()",
-      "String ProxyConnectionInfo.getURI()", "String ProxyConnectionInfo.getUser()",
-      "void ProxyConnectionInfo.setPassword(String)", "void ProxyConnectionInfo.setURI(String)",
-      "void ProxyConnectionInfo.setUser(String)", "String ProxyConnectionInfo.toString()"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void ProxyConnectionInfo.<init>()",
+    "String ProxyConnectionInfo.getPassword()",
+    "String ProxyConnectionInfo.getURI()",
+    "String ProxyConnectionInfo.getUser()",
+    "void ProxyConnectionInfo.setPassword(String)",
+    "void ProxyConnectionInfo.setURI(String)",
+    "void ProxyConnectionInfo.setUser(String)",
+    "String ProxyConnectionInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     ProxyConnectionInfo actualProxyConnectionInfo = new ProxyConnectionInfo();
@@ -36,7 +45,8 @@ public class ProxyConnectionInfoDiffblueTest {
     String actualURI = actualProxyConnectionInfo.getURI();
 
     // Assert
-    assertEquals("ProxyConnectionInfo{uri='Uri', user=User', password=iloveyou'}", actualToStringResult);
+    assertEquals(
+        "ProxyConnectionInfo{uri='Uri', user=User', password=iloveyou'}", actualToStringResult);
     assertEquals("Uri", actualURI);
     assertEquals("User", actualProxyConnectionInfo.getUser());
     assertEquals("iloveyou", actualPassword);

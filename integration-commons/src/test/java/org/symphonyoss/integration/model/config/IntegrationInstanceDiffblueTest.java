@@ -2,14 +2,16 @@ package org.symphonyoss.integration.model.config;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class IntegrationInstanceDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link IntegrationInstance}
    *   <li>{@link IntegrationInstance#setActive(Boolean)}
@@ -33,16 +35,28 @@ public class IntegrationInstanceDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void IntegrationInstance.<init>()", "Boolean IntegrationInstance.getActive()",
-      "String IntegrationInstance.getConfigurationId()", "Long IntegrationInstance.getCreatedDate()",
-      "String IntegrationInstance.getCreatorId()", "String IntegrationInstance.getCreatorName()",
-      "String IntegrationInstance.getInstanceId()", "Long IntegrationInstance.getLastModifiedDate()",
-      "String IntegrationInstance.getName()", "String IntegrationInstance.getOptionalProperties()",
-      "void IntegrationInstance.setActive(Boolean)", "void IntegrationInstance.setConfigurationId(String)",
-      "void IntegrationInstance.setCreatedDate(Long)", "void IntegrationInstance.setCreatorId(String)",
-      "void IntegrationInstance.setCreatorName(String)", "void IntegrationInstance.setInstanceId(String)",
-      "void IntegrationInstance.setLastModifiedDate(Long)", "void IntegrationInstance.setName(String)",
-      "void IntegrationInstance.setOptionalProperties(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationInstance.<init>()",
+    "Boolean IntegrationInstance.getActive()",
+    "String IntegrationInstance.getConfigurationId()",
+    "Long IntegrationInstance.getCreatedDate()",
+    "String IntegrationInstance.getCreatorId()",
+    "String IntegrationInstance.getCreatorName()",
+    "String IntegrationInstance.getInstanceId()",
+    "Long IntegrationInstance.getLastModifiedDate()",
+    "String IntegrationInstance.getName()",
+    "String IntegrationInstance.getOptionalProperties()",
+    "void IntegrationInstance.setActive(Boolean)",
+    "void IntegrationInstance.setConfigurationId(String)",
+    "void IntegrationInstance.setCreatedDate(Long)",
+    "void IntegrationInstance.setCreatorId(String)",
+    "void IntegrationInstance.setCreatorName(String)",
+    "void IntegrationInstance.setInstanceId(String)",
+    "void IntegrationInstance.setLastModifiedDate(Long)",
+    "void IntegrationInstance.setName(String)",
+    "void IntegrationInstance.setOptionalProperties(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     IntegrationInstance actualIntegrationInstance = new IntegrationInstance();

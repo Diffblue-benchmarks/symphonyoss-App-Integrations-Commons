@@ -1,14 +1,16 @@
 package org.symphonyoss.integration.model.yaml;
 
 import static org.junit.Assert.assertEquals;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 
 public class AllowedOriginDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link AllowedOrigin}
    *   <li>{@link AllowedOrigin#setAddress(String)}
@@ -18,8 +20,14 @@ public class AllowedOriginDiffblueTest {
    * </ul>
    */
   @Test
-  @MethodsUnderTest({"void AllowedOrigin.<init>()", "String AllowedOrigin.getAddress()",
-      "String AllowedOrigin.getHost()", "void AllowedOrigin.setAddress(String)", "void AllowedOrigin.setHost(String)"})
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void AllowedOrigin.<init>()",
+    "String AllowedOrigin.getAddress()",
+    "String AllowedOrigin.getHost()",
+    "void AllowedOrigin.setAddress(String)",
+    "void AllowedOrigin.setHost(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     AllowedOrigin actualAllowedOrigin = new AllowedOrigin();
