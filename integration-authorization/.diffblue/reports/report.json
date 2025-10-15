@@ -4,18 +4,18 @@
   },
   "run" : {
     "version" : "2025.09.01-44e352d-licensed",
-    "creationTimestamp" : "2025-09-19T09:44:53.208Z",
+    "creationTimestamp" : "2025-10-15T15:28:55.563Z",
     "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Commons --name with-diffblue-tests",
-    "totalTime" : 88.311,
+    "totalTime" : 92.246,
     "environmentDetectionTime" : 0.045,
-    "indexingTime" : 0.308,
+    "indexingTime" : 0.356,
     "entryPointsTime" : 0.027,
-    "generationTime" : 1789.428,
-    "timeToFirstTest" : 811.599,
-    "timeToLastTest" : 2241.002,
-    "indexQueryTime" : 4.1690000000000005,
-    "verificationTime" : 367.036,
-    "validationTime" : 8.554
+    "generationTime" : 1860.61,
+    "timeToFirstTest" : 856.113,
+    "timeToLastTest" : 2337.381,
+    "indexQueryTime" : 4.268,
+    "verificationTime" : 387.644,
+    "validationTime" : 9.088
   },
   "codes" : {
     "F009" : "Internal error",
