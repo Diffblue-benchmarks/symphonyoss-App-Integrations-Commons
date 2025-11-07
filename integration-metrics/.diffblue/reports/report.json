@@ -1,0 +1,161 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2025.02.02-08b2a5a-licensed",
+    "creationTimestamp" : "2025-11-07T13:35:34.139Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Commons --name with-diffblue-tests",
+    "totalTime" : 32.934,
+    "environmentDetectionTime" : 0.168,
+    "indexingTime" : 0.24,
+    "entryPointsTime" : 0.163,
+    "generationTime" : 938.538,
+    "timeToFirstTest" : 75.067,
+    "timeToLastTest" : 1025.934,
+    "indexQueryTime" : 3.193,
+    "verificationTime" : 53.419,
+    "validationTime" : 18.523
+  },
+  "codes" : {
+    "R005" : "Unable to load class",
+    "R006" : "Static initializer failed",
+    "T000" : "Method eligible for test creation",
+    "T005" : "Trivial constructor",
+    "T008" : "Private and never called",
+    "T010" : "Abstract or interface method",
+    "V000" : "Validated successfully"
+  },
+  "summary" : {
+    "classesCount" : 4,
+    "methodsCount" : 6,
+    "cumulativeDiffblueTestCount" : 1,
+    "cumulativeManualTestCount" : 2,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 42,
+    "perMethodTestability" : {
+      "T000" : 2,
+      "T005" : 2,
+      "T008" : 1,
+      "T010" : 1
+    },
+    "perMethodOutcome" : {
+      "R005" : 2,
+      "R006" : 2,
+      "T008" : 1,
+      "T010" : 1
+    },
+    "perTestValidation" : {
+      "V000" : 2357
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.metrics.IntegrationController" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsConstants" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T008" : 1
+      },
+      "perMethodOutcome" : {
+        "T008" : 1
+      }
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsController" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R005" : 2
+      }
+    },
+    "org.symphonyoss.integration.metrics.gauge.CounterRatio" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R006" : 2
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.metrics.IntegrationController.initController:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsConstants.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T008",
+      "perMethodOutcome" : "T008",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsController.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsController.addIntegrationTimer:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R005",
+      "lineNumbers" : [
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "org.symphonyoss.integration.metrics.gauge.CounterRatio.<init>:(Lcom/codahale/metrics/Counting;Lcom/codahale/metrics/Counting;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R006",
+      "lineNumbers" : [
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "org.symphonyoss.integration.metrics.gauge.CounterRatio.getRatio:()Lcom/codahale/metrics/RatioGauge$Ratio;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R006",
+      "lineNumbers" : [
+        50
+      ]
+    }
+  }
+}

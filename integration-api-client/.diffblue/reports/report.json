@@ -1,0 +1,1309 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2025.02.02-08b2a5a-licensed",
+    "creationTimestamp" : "2025-11-07T13:35:34.139Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Commons --name with-diffblue-tests",
+    "totalTime" : 171.879,
+    "environmentDetectionTime" : 0.247,
+    "indexingTime" : 0.247,
+    "entryPointsTime" : 0.241,
+    "generationTime" : 1070.252,
+    "timeToFirstTest" : 405.902,
+    "timeToLastTest" : 1296.86,
+    "indexQueryTime" : 4.899,
+    "verificationTime" : 185.673,
+    "validationTime" : 17.313
+  },
+  "codes" : {
+    "F009" : "Internal error",
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R004" : "No meaningful assertions found",
+    "R011" : "Sandboxing policy violation",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "R026" : "Failed to create Spring context",
+    "T000" : "Method eligible for test creation",
+    "T002" : "Trivial setter",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T008" : "Private and never called",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "V000" : "Validated successfully"
+  },
+  "summary" : {
+    "classesCount" : 17,
+    "methodsCount" : 85,
+    "cumulativeDiffblueTestCount" : 0,
+    "cumulativeManualTestCount" : 78,
+    "completeTestCount" : 6,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 799,
+    "perMethodTestability" : {
+      "T000" : 56,
+      "T002" : 2,
+      "T003" : 6,
+      "T005" : 8,
+      "T008" : 1,
+      "T010" : 11,
+      "T012" : 1
+    },
+    "perMethodOutcome" : {
+      "F009" : 41,
+      "R000" : 4,
+      "R002" : 5,
+      "R004" : 1,
+      "R011" : 2,
+      "R013" : 2,
+      "R026" : 9,
+      "T003" : 6,
+      "T005" : 2,
+      "T008" : 1,
+      "T010" : 11,
+      "T012" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 6
+    },
+    "perTestValidation" : {
+      "V000" : 6
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.api.client.ApiClientDecoratorUtils" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R004" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.api.client.AppAuthenticationProxyApiClient" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "F009" : 2
+      }
+    },
+    "org.symphonyoss.integration.api.client.AuthenticationProxyApiClient" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "F009" : 2
+      }
+    },
+    "org.symphonyoss.integration.api.client.ConnectivityApiClientDecorator" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 6,
+        "T003" : 1
+      }
+    },
+    "org.symphonyoss.integration.api.client.EntitySerializer" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClient" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 7
+      },
+      "perMethodOutcome" : {
+        "T010" : 7
+      }
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 7,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 6,
+        "R000" : 1,
+        "R013" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.symphonyoss.integration.api.client.ReAuthenticationApiClient" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 5
+      }
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient" : {
+      "methodsCount" : 14,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 8,
+        "T002" : 2,
+        "T003" : 3,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 3,
+        "R000" : 3,
+        "R002" : 2,
+        "R011" : 2,
+        "T003" : 3,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient" : {
+      "methodsCount" : 13,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 10,
+        "T010" : 3
+      },
+      "perMethodOutcome" : {
+        "F009" : 3,
+        "R026" : 7,
+        "T010" : 3
+      }
+    },
+    "org.symphonyoss.integration.api.client.form.MultiPartEntitySerializer" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 1,
+        "R002" : 1
+      }
+    },
+    "org.symphonyoss.integration.api.client.json.JsonEntitySerializer" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "F009" : 2
+      }
+    },
+    "org.symphonyoss.integration.api.client.json.JsonUtils" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3
+      },
+      "perMethodOutcome" : {
+        "F009" : 3
+      }
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsConstants" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T008" : 1
+      },
+      "perMethodOutcome" : {
+        "T008" : 1
+      }
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsController" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T003" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R013" : 1,
+        "R026" : 2,
+        "T003" : 2,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.api.client.metrics.MetricsHttpApiClient" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 4,
+        "R002" : 1
+      }
+    },
+    "org.symphonyoss.integration.api.client.trace.TraceLoggingApiClient" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 4,
+        "R002" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.api.client.ApiClientDecoratorUtils.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ApiClientDecoratorUtils.setHeaderTraceId:(Ljava/util/Map;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        39,
+        40,
+        42
+      ]
+    },
+    "org.symphonyoss.integration.api.client.AppAuthenticationProxyApiClient.<init>:(Lorg/symphonyoss/integration/api/client/EntitySerializer;Lorg/symphonyoss/integration/authentication/api/AppAuthenticationProxy;Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    "org.symphonyoss.integration.api.client.AppAuthenticationProxyApiClient.getClientForContext:(Ljava/util/Map;Ljava/util/Map;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        49,
+        50
+      ]
+    },
+    "org.symphonyoss.integration.api.client.AuthenticationProxyApiClient.<init>:(Lorg/symphonyoss/integration/api/client/EntitySerializer;Lorg/symphonyoss/integration/authentication/AuthenticationProxy;Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    "org.symphonyoss.integration.api.client.AuthenticationProxyApiClient.getClientForContext:(Ljava/util/Map;Ljava/util/Map;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        50,
+        52,
+        53,
+        54,
+        57
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ConnectivityApiClientDecorator.<init>:(Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;Lorg/symphonyoss/integration/api/client/HttpApiClient;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        39,
+        40,
+        41
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ConnectivityApiClientDecorator.doDelete:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        78,
+        79,
+        80
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ConnectivityApiClientDecorator.doGet:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        47,
+        48,
+        49
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ConnectivityApiClientDecorator.doPost:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        58,
+        59,
+        60
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ConnectivityApiClientDecorator.doPut:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        68,
+        69,
+        70
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ConnectivityApiClientDecorator.getConnectivityException:(Ljavax/ws/rs/ProcessingException;)Lorg/symphonyoss/integration/exception/authentication/ConnectivityException;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        105
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ConnectivityApiClientDecorator.getException:(Ljavax/ws/rs/ProcessingException;)Ljava/lang/RuntimeException;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        92,
+        93,
+        95
+      ]
+    },
+    "org.symphonyoss.integration.api.client.EntitySerializer.serialize:(Ljava/lang/Object;)Ljavax/ws/rs/client/Entity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClient.doDelete:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClient.doGet:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClient.doPost:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClient.doPut:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClient.escapeString:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClient.getClientForContext:(Ljava/util/Map;Ljava/util/Map;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClient.setEntitySerializer:(Lorg/symphonyoss/integration/api/client/EntitySerializer;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator.<init>:(Lorg/symphonyoss/integration/api/client/HttpApiClient;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        33,
+        34,
+        35
+      ]
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator.doDelete:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator.doGet:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        45
+      ]
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator.doPost:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator.doPut:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        58
+      ]
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator.escapeString:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        39
+      ]
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator.getClientForContext:(Ljava/util/Map;Ljava/util/Map;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.symphonyoss.integration.api.client.HttpApiClientDecorator.setEntitySerializer:(Lorg/symphonyoss/integration/api/client/EntitySerializer;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        75,
+        76
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ReAuthenticationApiClient.<init>:(Lorg/symphonyoss/integration/authentication/AuthenticationProxy;Lorg/symphonyoss/integration/api/client/HttpApiClient;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        38,
+        39,
+        40
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ReAuthenticationApiClient.doDelete:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        116,
+        117,
+        118,
+        120,
+        121,
+        125,
+        126,
+        128,
+        129,
+        130
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ReAuthenticationApiClient.doGet:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        46,
+        47,
+        48,
+        50,
+        51,
+        55,
+        56,
+        58,
+        59,
+        60
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ReAuthenticationApiClient.doPost:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        70,
+        71,
+        72,
+        74,
+        75,
+        79,
+        80,
+        82,
+        83,
+        84
+      ]
+    },
+    "org.symphonyoss.integration.api.client.ReAuthenticationApiClient.doPut:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        93,
+        94,
+        95,
+        97,
+        98,
+        102,
+        103,
+        105,
+        106,
+        107
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        46,
+        54
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.<init>:(Lorg/symphonyoss/integration/api/client/EntitySerializer;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        77,
+        65,
+        78,
+        79
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.buildWebTarget:(Ljava/lang/String;Ljavax/ws/rs/client/Client;Ljava/util/Map;)Ljavax/ws/rs/client/WebTarget;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        210,
+        212,
+        213,
+        214,
+        215,
+        217,
+        220
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.deserialize:(Ljavax/ws/rs/core/Response;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        258,
+        259
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.doDelete:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        153,
+        155,
+        156,
+        157,
+        159,
+        160,
+        162,
+        163,
+        160,
+        162,
+        163,
+        165
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.doGet:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        98,
+        100,
+        101,
+        102,
+        104,
+        105,
+        107,
+        108,
+        105,
+        107,
+        108,
+        110
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.doPost:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        117,
+        119,
+        120,
+        121,
+        123,
+        124,
+        126,
+        127,
+        124,
+        126,
+        127,
+        129
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.doPut:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        135,
+        137,
+        138,
+        139,
+        141,
+        142,
+        144,
+        145,
+        142,
+        144,
+        145,
+        147
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.escapeString:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        88,
+        89,
+        90,
+        91
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.getClientForContext:(Ljava/util/Map;Ljava/util/Map;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        170
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.getInvocationBuilder:(Ljava/lang/String;Ljavax/ws/rs/client/Client;Ljava/util/Map;Ljava/util/Map;)Ljavax/ws/rs/client/Invocation$Builder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        188,
+        189,
+        191,
+        192,
+        193,
+        195,
+        197,
+        199
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.handleResponse:(Ljava/lang/Class;Ljavax/ws/rs/core/Response;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        231,
+        232,
+        233,
+        234,
+        235,
+        237,
+        241,
+        243,
+        244,
+        245,
+        246,
+        250
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.setBasePath:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        82,
+        83
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SimpleHttpApiClient.setEntitySerializer:(Lorg/symphonyoss/integration/api/client/EntitySerializer;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        175,
+        176
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.<init>:(Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        40,
+        41,
+        44,
+        45
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.buildHttpClient:(Ljava/lang/String;)Lorg/symphonyoss/integration/api/client/HttpApiClient;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        64,
+        66,
+        68,
+        71,
+        74,
+        76
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.doDelete:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        106
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.doGet:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        87
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.doPost:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        94
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.doPut:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        100
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.escapeString:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        81
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.getBasePath:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.getClient:()Lorg/symphonyoss/integration/api/client/HttpApiClient;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        116
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.getClientForContext:(Ljava/util/Map;Ljava/util/Map;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        112
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.getProxy:()Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        49,
+        50,
+        51
+      ]
+    },
+    "org.symphonyoss.integration.api.client.SymphonyApiClient.setEntitySerializer:(Lorg/symphonyoss/integration/api/client/EntitySerializer;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        121,
+        122,
+        123
+      ]
+    },
+    "org.symphonyoss.integration.api.client.form.MultiPartEntitySerializer.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        32
+      ]
+    },
+    "org.symphonyoss.integration.api.client.form.MultiPartEntitySerializer.serialize:(Ljava/lang/Object;)Ljavax/ws/rs/client/Entity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        36
+      ]
+    },
+    "org.symphonyoss.integration.api.client.json.JsonEntitySerializer.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        29,
+        34
+      ]
+    },
+    "org.symphonyoss.integration.api.client.json.JsonEntitySerializer.serialize:(Ljava/lang/Object;)Ljavax/ws/rs/client/Entity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        41
+      ]
+    },
+    "org.symphonyoss.integration.api.client.json.JsonUtils.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        36,
+        34,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    "org.symphonyoss.integration.api.client.json.JsonUtils.deserialize:(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        68,
+        69,
+        70,
+        71,
+        73
+      ]
+    },
+    "org.symphonyoss.integration.api.client.json.JsonUtils.serialize:(Ljava/lang/Object;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        49,
+        50,
+        52,
+        54,
+        55
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsConstants.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T008",
+      "perMethodOutcome" : "T008",
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsController.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        46,
+        59,
+        64,
+        69
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsController.finishApiCall:(Lcom/codahale/metrics/Timer$Context;Ljava/lang/String;Z)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        163,
+        165,
+        167,
+        168,
+        170,
+        173,
+        174,
+        176
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsController.getApiKey:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        142,
+        144,
+        145,
+        147,
+        148,
+        144,
+        152
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsController.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        76,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsController.initEndpoint:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        93,
+        95,
+        98,
+        101,
+        104,
+        107,
+        110,
+        111,
+        116,
+        117,
+        118,
+        117,
+        121
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.ApiMetricsController.startApiCall:(Ljava/lang/String;)Lcom/codahale/metrics/Timer$Context;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        129,
+        131,
+        133
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.MetricsHttpApiClient.<init>:(Lorg/symphonyoss/integration/api/client/metrics/ApiMetricsController;Lorg/symphonyoss/integration/api/client/HttpApiClient;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        35,
+        36,
+        37
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.MetricsHttpApiClient.doDelete:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        97,
+        98,
+        101,
+        103,
+        104,
+        106,
+        108,
+        106,
+        108,
+        109
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.MetricsHttpApiClient.doGet:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        42,
+        43,
+        46,
+        48,
+        49,
+        51,
+        53,
+        51,
+        53,
+        54
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.MetricsHttpApiClient.doPost:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        61,
+        62,
+        65,
+        67,
+        68,
+        70,
+        72,
+        70,
+        72,
+        73
+      ]
+    },
+    "org.symphonyoss.integration.api.client.metrics.MetricsHttpApiClient.doPut:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        79,
+        80,
+        83,
+        85,
+        86,
+        88,
+        90,
+        88,
+        90,
+        91
+      ]
+    },
+    "org.symphonyoss.integration.api.client.trace.TraceLoggingApiClient.<init>:(Lorg/symphonyoss/integration/api/client/HttpApiClient;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        33,
+        34
+      ]
+    },
+    "org.symphonyoss.integration.api.client.trace.TraceLoggingApiClient.doDelete:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        61,
+        62
+      ]
+    },
+    "org.symphonyoss.integration.api.client.trace.TraceLoggingApiClient.doGet:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        39,
+        40
+      ]
+    },
+    "org.symphonyoss.integration.api.client.trace.TraceLoggingApiClient.doPost:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        47,
+        48
+      ]
+    },
+    "org.symphonyoss.integration.api.client.trace.TraceLoggingApiClient.doPut:(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        54,
+        55
+      ]
+    }
+  }
+}
