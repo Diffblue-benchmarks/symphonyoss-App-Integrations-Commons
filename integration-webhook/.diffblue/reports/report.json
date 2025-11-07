@@ -1,0 +1,2204 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2024.10.01-2ee2e3d-licensed",
+    "creationTimestamp" : "2025-11-07T13:19:25.384Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Commons --name with-diffblue-tests",
+    "totalTime" : 826.321,
+    "environmentDetectionTime" : 0.385,
+    "indexingTime" : 0.247,
+    "entryPointsTime" : 0.377,
+    "generationTime" : 621.437,
+    "timeToFirstTest" : 51.438,
+    "timeToLastTest" : 612.951,
+    "indexQueryTime" : 5.706,
+    "verificationTime" : 61.99,
+    "validationTime" : 18.29
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R004" : "No meaningful assertions found",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T002" : "Trivial setter",
+    "T003" : "Private method",
+    "T004" : "In anonymous inner class",
+    "T005" : "Trivial constructor",
+    "T008" : "Private and never called",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "T020" : "Other trivial method",
+    "V000" : "Validated successfully",
+    "W001" : "Test did not compile"
+  },
+  "summary" : {
+    "classesCount" : 25,
+    "methodsCount" : 136,
+    "cumulativeDiffblueTestCount" : 30,
+    "cumulativeManualTestCount" : 44,
+    "completeTestCount" : 64,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 979,
+    "perMethodTestability" : {
+      "T000" : 40,
+      "T001" : 21,
+      "T002" : 15,
+      "T003" : 22,
+      "T004" : 6,
+      "T005" : 6,
+      "T008" : 1,
+      "T010" : 14,
+      "T012" : 8,
+      "T020" : 3
+    },
+    "perMethodOutcome" : {
+      "R000" : 64,
+      "R004" : 3,
+      "R013" : 7,
+      "T003" : 22,
+      "T004" : 6,
+      "T005" : 1,
+      "T008" : 1,
+      "T010" : 14,
+      "T012" : 8,
+      "W001" : 10
+    },
+    "perTestOutcome" : {
+      "R000" : 64
+    },
+    "perTestValidation" : {
+      "V000" : 64
+    },
+    "warnings" : {
+      "W001" : 3
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.webhook.WebHookIntegration" : {
+      "methodsCount" : 30,
+      "completeTestCount" : 20,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 14,
+        "T003" : 12,
+        "T010" : 2,
+        "T012" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 9,
+        "R013" : 5,
+        "T003" : 12,
+        "T010" : 2,
+        "T012" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 20
+      }
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration$1" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2
+      },
+      "perMethodOutcome" : {
+        "T004" : 2
+      }
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration$2" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.WebHookPayload" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 7,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T001" : 3,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 6
+      },
+      "perTestOutcome" : {
+        "R000" : 7
+      }
+    },
+    "org.symphonyoss.integration.webhook.exception.InvalidStreamTypeException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.exception.MetadataParserException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.symphonyoss.integration.webhook.exception.StreamTypeNotFoundException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookDisabledException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookParseException" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 10,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4
+      },
+      "perMethodOutcome" : {
+        "R000" : 4
+      },
+      "perTestOutcome" : {
+        "R000" : 10
+      }
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookUnavailableException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookUnprocessableEntityException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.exception.WebhookException" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 2
+      },
+      "perMethodOutcome" : {
+        "T010" : 2
+      }
+    },
+    "org.symphonyoss.integration.webhook.metrics.ParserMetricsConstants" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T008" : 1
+      },
+      "perMethodOutcome" : {
+        "T008" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.metrics.ParserMetricsController" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "R013" : 1,
+        "T005" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParser" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 2
+      },
+      "perMethodOutcome" : {
+        "T010" : 2
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserFactory" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 3
+      },
+      "perMethodOutcome" : {
+        "T010" : 3
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserResolver" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 7,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T003" : 1,
+        "T010" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 3,
+        "T003" : 1,
+        "T010" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 7
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.EntityObject" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T001" : 3,
+        "T005" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 6
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata" : {
+      "methodsCount" : 12,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T001" : 5,
+        "T002" : 5,
+        "T005" : 1,
+        "T020" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 12
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField" : {
+      "methodsCount" : 12,
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T001" : 4,
+        "T002" : 4,
+        "T003" : 1,
+        "T020" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T003" : 1,
+        "W001" : 10
+      },
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "warnings" : {
+        "W001" : 3
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 2,
+        "T012" : 4
+      },
+      "perMethodOutcome" : {
+        "T003" : 2,
+        "T012" : 4
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type$1" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2
+      },
+      "perMethodOutcome" : {
+        "T004" : 2
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type$2" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2
+      },
+      "perMethodOutcome" : {
+        "T004" : 2
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject" : {
+      "methodsCount" : 14,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T001" : 6,
+        "T002" : 6,
+        "T005" : 1,
+        "T020" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 14
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser" : {
+      "methodsCount" : 15,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T003" : 6,
+        "T010" : 3,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R004" : 3,
+        "R013" : 1,
+        "T003" : 6,
+        "T010" : 3,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.webhook.WebHookIntegration$1.<init>:(Lorg/symphonyoss/integration/webhook/WebHookIntegration;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        551
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration$1.run:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        554,
+        555
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration$2.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        373
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        82
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        80,
+        125,
+        135
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.access$000:(Lorg/symphonyoss/integration/webhook/WebHookIntegration;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        80
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.authenticate:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        185,
+        188,
+        186,
+        187,
+        189
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.buildMessageML:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        483,
+        485,
+        486,
+        488,
+        489,
+        490,
+        491,
+        493,
+        495,
+        496
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.closeCircuit:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        560,
+        561
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.getHealthStatus:()Lorg/symphonyoss/integration/model/healthcheck/IntegrationHealth;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        502
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.getIntegrationInstance:(Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        569,
+        570,
+        569
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.getIntegrationWhiteList:()Ljava/util/Set;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        575,
+        576,
+        579,
+        581,
+        582,
+        585
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.getLastPostedDate:(Ljava/util/List;)Ljava/lang/Long;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        446,
+        448,
+        450,
+        451,
+        452
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.getSettings:()Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        507
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.getSupportedContentTypes:()Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.getUserDisplayName:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        393,
+        394,
+        397,
+        398,
+        399,
+        400,
+        402
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.getWelcomeMessage:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        370,
+        371,
+        373,
+        375,
+        377,
+        378,
+        379,
+        382
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.handle:(Ljava/lang/String;Ljava/lang/String;Lorg/symphonyoss/integration/webhook/WebHookPayload;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        243,
+        244,
+        245,
+        247,
+        248,
+        250,
+        251,
+        254,
+        255,
+        256,
+        257,
+        260
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.includeOwnershipOnMessageData:(Lorg/symphonyoss/integration/model/message/Message;Lorg/symphonyoss/integration/model/config/IntegrationInstance;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        268,
+        269,
+        271,
+        272,
+        273,
+        276,
+        281,
+        282,
+        284,
+        287,
+        288,
+        289,
+        291,
+        292,
+        295,
+        296,
+        299,
+        300,
+        303,
+        301,
+        302,
+        304
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.isAvailable:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        523,
+        525,
+        527,
+        528,
+        530,
+        531,
+        532,
+        534,
+        536,
+        537,
+        538,
+        541
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.isSupportedContentType:(Ljavax/ws/rs/core/MediaType;)Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        602,
+        603,
+        604,
+        605,
+        606,
+        609
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.onConfigChange:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        199,
+        200
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.onCreate:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        154,
+        156,
+        158,
+        161,
+        162,
+        164,
+        180,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        181
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.onDestroy:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        204,
+        205,
+        206
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.openCircuit:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        550,
+        551,
+        557
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.parse:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Lorg/symphonyoss/integration/webhook/WebHookPayload;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        220
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.parse:(Lorg/symphonyoss/integration/webhook/WebHookPayload;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        231
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.parseRequest:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;Lorg/symphonyoss/integration/webhook/WebHookPayload;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        315,
+        316,
+        317,
+        320,
+        321,
+        322,
+        324,
+        325,
+        324,
+        325,
+        327
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.postMessage:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;Ljava/util/List;Lorg/symphonyoss/integration/model/message/Message;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        416,
+        418,
+        420,
+        422,
+        424
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.sendMessage:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;Ljava/util/List;Lorg/symphonyoss/integration/model/message/Message;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        437,
+        438
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.updateConfiguration:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        192,
+        193,
+        194,
+        195
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.updateLastPostedDate:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;Ljava/lang/Long;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        464,
+        465,
+        466,
+        467,
+        468,
+        470,
+        473,
+        471,
+        472,
+        474
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookIntegration.welcome:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        339,
+        340,
+        343,
+        344,
+        345,
+        346,
+        348,
+        350,
+        351,
+        355,
+        357,
+        358,
+        359,
+        361
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookPayload.<init>:(Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        59,
+        41,
+        46,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookPayload.addParameter:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        95,
+        96
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookPayload.getBody:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookPayload.getContentType:()Ljavax/ws/rs/core/MediaType;" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        103,
+        104,
+        105,
+        107,
+        109,
+        110,
+        112,
+        115
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookPayload.getHeaders:()Ljava/util/Map;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        86
+      ]
+    },
+    "org.symphonyoss.integration.webhook.WebHookPayload.getParameters:()Ljava/util/Map;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.InvalidStreamTypeException.<init>:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        27,
+        28
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.MetadataParserException.<init>:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.StreamTypeNotFoundException.<init>:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        27,
+        28
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookDisabledException.<init>:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        25,
+        26
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookParseException.<init>:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookParseException.<init>:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        41,
+        42
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookParseException.<init>:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        37,
+        38
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookParseException.<init>:(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        33,
+        34
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookUnavailableException.<init>:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        25,
+        26
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebHookUnprocessableEntityException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        34,
+        35
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebhookException.<init>:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        37,
+        38
+      ]
+    },
+    "org.symphonyoss.integration.webhook.exception.WebhookException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        33,
+        34
+      ]
+    },
+    "org.symphonyoss.integration.webhook.metrics.ParserMetricsConstants.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T008",
+      "perMethodOutcome" : "T008",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.symphonyoss.integration.webhook.metrics.ParserMetricsController.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        41,
+        49,
+        54,
+        59
+      ]
+    },
+    "org.symphonyoss.integration.webhook.metrics.ParserMetricsController.finishParserExecution:(Lcom/codahale/metrics/Timer$Context;Ljava/lang/String;Z)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        123,
+        124,
+        126,
+        129,
+        130,
+        133,
+        134,
+        136
+      ]
+    },
+    "org.symphonyoss.integration.webhook.metrics.ParserMetricsController.initController:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        70,
+        71,
+        74,
+        75,
+        74,
+        76,
+        79,
+        80,
+        81,
+        85,
+        86,
+        92,
+        93,
+        96
+      ]
+    },
+    "org.symphonyoss.integration.webhook.metrics.ParserMetricsController.startParserExecution:(Ljava/lang/String;)Lcom/codahale/metrics/Timer$Context;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        104,
+        106,
+        107,
+        110
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParser.getEvents:()Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParser.parse:(Lorg/symphonyoss/integration/webhook/WebHookPayload;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserFactory.accept:(Lorg/symphonyoss/integration/model/message/MessageMLVersion;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserFactory.getParser:(Lorg/symphonyoss/integration/webhook/WebHookPayload;)Lorg/symphonyoss/integration/webhook/parser/WebHookParser;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserFactory.onConfigChange:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserResolver.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserResolver.getFactories:()Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserResolver.getFactory:()Lorg/symphonyoss/integration/webhook/parser/WebHookParserFactory;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        65
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserResolver.handleMessageMLVersionUpdatedEvent:(Lorg/symphonyoss/integration/event/MessageMLVersionUpdatedEventData;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        61,
+        62
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserResolver.init:()V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        40,
+        41
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.WebHookParserResolver.setupParserFactory:(Lorg/symphonyoss/integration/model/message/MessageMLVersion;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        47,
+        48,
+        49,
+        50,
+        52,
+        53
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.EntityObject.<init>:()V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        46,
+        44,
+        46
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.EntityObject.<init>:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        48,
+        44,
+        49,
+        50,
+        51
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.EntityObject.addContent:(Ljava/lang/String;Ljava/lang/Object;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        68,
+        69
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.EntityObject.getContent:()Ljava/util/Map;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        63
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.EntityObject.getType:()Ljava/lang/String;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        54
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.EntityObject.getVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        58
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        36
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.getFields:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        86
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.getName:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        50
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.getObjects:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        77
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.getType:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        59
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.getVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        68
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.setFields:(Ljava/util/List;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        90,
+        91
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.setName:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        54,
+        55
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.setObjects:(Ljava/util/List;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        81,
+        82
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.setType:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        63,
+        64
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.setVersion:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        72,
+        73
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.Metadata.toString:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T020",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        95
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type$1.<init>:(Ljava/lang/String;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        43
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type$1.getValue:(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        46
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type$2.<init>:(Ljava/lang/String;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        49
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type$2.getValue:(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        43,
+        49,
+        42
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type.<init>:(Ljava/lang/String;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type.<init>:(Ljava/lang/String;ILorg/symphonyoss/integration/webhook/parser/metadata/MetadataField$1;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type.getValue:(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003"
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type.valueOf:(Ljava/lang/String;)Lorg/symphonyoss/integration/webhook/parser/metadata/MetadataField$Type;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField$Type.values:()[Lorg/symphonyoss/integration/webhook/parser/metadata/MetadataField$Type;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        38,
+        63
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.getKey:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        69
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.getResultNode:(Lcom/fasterxml/jackson/databind/JsonNode;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        148,
+        150,
+        152,
+        153,
+        152,
+        156
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.getType:()Lorg/symphonyoss/integration/webhook/parser/metadata/MetadataField$Type;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        96
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.getValue:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.isBlank:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        87
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.process:(Lorg/symphonyoss/integration/webhook/parser/metadata/EntityObject;Lcom/fasterxml/jackson/databind/JsonNode;)V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        112,
+        114,
+        115,
+        118,
+        120,
+        121,
+        123
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.setBlank:(Z)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        91,
+        92
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.setKey:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        73,
+        74
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.setType:(Lorg/symphonyoss/integration/webhook/parser/metadata/MetadataField$Type;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        100,
+        101
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.setValue:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        82,
+        83
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataField.toString:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T020",
+      "perMethodOutcome" : "W001",
+      "warnings" : {
+        "W001" : 1
+      },
+      "lineNumbers" : [
+        161
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        44
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.getChildren:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        105
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.getFields:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        96
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.getId:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        60
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.getType:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        69
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.getVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.isList:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        87
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.setChildren:(Ljava/util/List;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        109,
+        110
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.setFields:(Ljava/util/List;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        100,
+        101
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.setId:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        64,
+        65
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.setList:(Z)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        91,
+        92
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.setType:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        73,
+        74
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.setVersion:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        82,
+        83
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataObject.toString:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T020",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        114
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        54
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        70,
+        72,
+        73,
+        76,
+        74,
+        75,
+        77
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.getEntityJSON:(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        172,
+        173,
+        176,
+        178,
+        179,
+        180,
+        182,
+        183,
+        185,
+        188,
+        189,
+        191,
+        192,
+        193,
+        194
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.getMetadataFile:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.getTemplateFile:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.getVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        337
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        84,
+        85,
+        86
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.parse:(Lcom/fasterxml/jackson/databind/JsonNode;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        148,
+        149,
+        152,
+        154,
+        155,
+        156,
+        157,
+        158,
+        160,
+        163
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.postProcessOutputData:(Lorg/symphonyoss/integration/webhook/parser/metadata/EntityObject;Lcom/fasterxml/jackson/databind/JsonNode;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        317
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.preProcessInputData:(Lcom/fasterxml/jackson/databind/JsonNode;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        214
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.processListMetadataObjects:(Lorg/symphonyoss/integration/webhook/parser/metadata/EntityObject;Lcom/fasterxml/jackson/databind/JsonNode;Lorg/symphonyoss/integration/webhook/parser/metadata/MetadataObject;Lorg/symphonyoss/integration/webhook/parser/metadata/EntityObject;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        264,
+        267,
+        268,
+        271,
+        272,
+        275,
+        277,
+        278,
+        279,
+        281,
+        284,
+        285,
+        286
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.processMetadataFields:(Lorg/symphonyoss/integration/webhook/parser/metadata/EntityObject;Lcom/fasterxml/jackson/databind/JsonNode;Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        297,
+        298,
+        299,
+        300,
+        302
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.processMetadataObjects:(Lorg/symphonyoss/integration/webhook/parser/metadata/EntityObject;Lcom/fasterxml/jackson/databind/JsonNode;Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        234,
+        235,
+        237,
+        238,
+        239,
+        240,
+        243,
+        244,
+        245,
+        246,
+        249,
+        250,
+        252,
+        253
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.readMetadataFile:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        95,
+        97,
+        99,
+        100,
+        102,
+        106,
+        104,
+        105,
+        107
+      ]
+    },
+    "org.symphonyoss.integration.webhook.parser.metadata.MetadataParser.readTemplateFile:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        116,
+        118,
+        120,
+        121,
+        122,
+        125,
+        127,
+        129,
+        130,
+        131,
+        134,
+        135,
+        125,
+        135,
+        137,
+        135,
+        136,
+        138
+      ]
+    }
+  }
+}
