@@ -13,6 +13,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.diffblue.cover</groupId>
+            <artifactId>cover-annotations</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.symphonyoss.symphony.integrations</groupId>
             <artifactId>integration-commons</artifactId>
             <version>${project.version}</version>
