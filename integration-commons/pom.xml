@@ -22,6 +22,12 @@
             <artifactId>integration-authentication-api</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.diffblue.cover</groupId>
+            <artifactId>cover-annotations</artifactId>
+            <version>1.7.0</version>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
