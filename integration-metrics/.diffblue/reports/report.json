@@ -1,0 +1,722 @@
+{
+  "meta" : {
+    "reportVersion" : "2.8"
+  },
+  "run" : {
+    "version" : "2025.11.01-3385b9f-licensed",
+    "creationTimestamp" : "2025-11-13T00:04:54.029Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Commons --name with-diffblue-tests",
+    "totalTime" : 39.209,
+    "environmentDetectionTime" : 0.446,
+    "indexingTime" : 0.358,
+    "entryPointsTime" : 0.433,
+    "generationTime" : 1610.954,
+    "timeToFirstTest" : 70.585,
+    "timeToLastTest" : 1673.821,
+    "indexQueryTime" : 1.118,
+    "verificationTime" : 50.672,
+    "validationTime" : 5.688
+  },
+  "codes" : {
+    "R000" : "Success",
+    "T000" : "Method eligible for test creation",
+    "T005" : "Trivial constructor",
+    "T008" : "Private and never called",
+    "T010" : "Abstract or interface method",
+    "V000" : "Validated successfully"
+  },
+  "summary" : {
+    "classesCount" : 4,
+    "methodsCount" : 6,
+    "cumulativeDiffblueTestCount" : 4,
+    "cumulativeManualTestCount" : 2,
+    "completeTestCount" : 4,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 42,
+    "perMethodTestability" : {
+      "T000" : 2,
+      "T005" : 2,
+      "T008" : 1,
+      "T010" : 1
+    },
+    "perMethodOutcome" : {
+      "R000" : 3,
+      "T005" : 1,
+      "T008" : 1,
+      "T010" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 4
+    },
+    "perTestValidation" : {
+      "V000" : 4
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.metrics.IntegrationController" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsConstants" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T008" : 1
+      },
+      "perMethodOutcome" : {
+        "T008" : 1
+      }
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsController" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T005" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.symphonyoss.integration.metrics.gauge.CounterRatio" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.metrics.IntegrationController.initController:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsConstants.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T008",
+      "perMethodOutcome" : "T008",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsController.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.metrics.IntegrationMetricsController.addIntegrationTimer:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "org.symphonyoss.integration.metrics.gauge.CounterRatio.<init>:(Lcom/codahale/metrics/Counting;Lcom/codahale/metrics/Counting;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "org.symphonyoss.integration.metrics.gauge.CounterRatio.getRatio:()Lcom/codahale/metrics/RatioGauge$Ratio;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        50
+      ]
+    }
+  },
+  "validationMetrics" : { },
+  "outputCodes" : [
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.IntegrationStatus",
+            "descriptor" : "(Ljava/lang/String;)Lorg/symphonyoss/integration/IntegrationStatus;",
+            "methodName" : "valueOf"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.IntegrationStatus",
+            "descriptor" : "()[Lorg/symphonyoss/integration/IntegrationStatus;",
+            "methodName" : "values"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lorg/symphonyoss/integration/authorization/UserAuthorizationDataKey;\",\"simpleNames\":[\"UserAuthorizationDataKey\"]},\"fieldName\":\"configurationId\"},{\"className\":{\"descriptor\":\"Lorg/symphonyoss/integration/authorization/UserAuthorizationDataKey;\",\"simpleNames\":[\"UserAuthorizationDataKey\"]},\"fieldName\":\"url\"},{\"className\":{\"descriptor\":\"Lorg/symphonyoss/integration/authorization/UserAuthorizationDataKey;\",\"simpleNames\":[\"UserAuthorizationDataKey\"]},\"fieldName\":\"userId\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.authorization.UserAuthorizationDataKey",
+            "descriptor" : "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"unexpected element (uri:\\\"\\\", local:\\\"presentationML\\\"). Expected elements are <{}attribute>,<{}entity>,<{}messageML>\",\"originalClassName\":\"javax.xml.bind.UnmarshalException\",\"stackTrace\":[{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext\",\"fileName\":\"UnmarshallingContext.java\",\"lineNumber\":726,\"methodName\":\"handleEvent\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader\",\"fileName\":\"Loader.java\",\"lineNumber\":247,\"methodName\":\"reportError\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader\",\"fileName\":\"Loader.java\",\"lineNumber\":242,\"methodName\":\"reportError\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader\",\"fileName\":\"Loader.java\",\"lineNumber\":109,\"methodName\":\"reportUnexpectedChildElement\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext$DefaultRootLoader\",\"fileName\":\"UnmarshallingContext.java\",\"lineNumber\":1131,\"methodName\":\"childElement\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext\",\"fileName\":\"UnmarshallingContext.java\",\"lineNumber\":556,\"methodName\":\"_startElement\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext\",\"fileName\":\"UnmarshallingContext.java\",\"lineNumber\":538,\"methodName\":\"startElement\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.SAXConnector\",\"fileName\":\"SAXConnector.java\",\"lineNumber\":153,\"methodName\":\"startElement\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser\",\"fileName\":\"AbstractSAXParser.java\",\"lineNumber\":509,\"methodName\":\"startElement\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl\",\"fileName\":\"XMLNSDocumentScannerImpl.java\",\"lineNumber\":374,\"methodName\":\"scanStartElement\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver\",\"fileName\":\"XMLNSDocumentScannerImpl.java\",\"lineNumber\":613,\"methodName\":\"scanRootElementHook\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver\",\"fileName\":\"XMLDocumentFragmentScannerImpl.java\",\"lineNumber\":3131,\"methodName\":\"next\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver\",\"fileName\":\"XMLDocumentScannerImpl.java\",\"lineNumber\":851,\"methodName\":\"next\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl\",\"fileName\":\"XMLDocumentScannerImpl.java\",\"lineNumber\":601,\"methodName\":\"next\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl\",\"fileName\":\"XMLNSDocumentScannerImpl.java\",\"lineNumber\":112,\"methodName\":\"next\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl\",\"fileName\":\"XMLDocumentFragmentScannerImpl.java\",\"lineNumber\":504,\"methodName\":\"scanDocument\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.parsers.XML11Configuration\",\"fileName\":\"XML11Configuration.java\",\"lineNumber\":841,\"methodName\":\"parse\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.parsers.XML11Configuration\",\"fileName\":\"XML11Configuration.java\",\"lineNumber\":770,\"methodName\":\"parse\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.parsers.XMLParser\",\"fileName\":\"XMLParser.java\",\"lineNumber\":141,\"methodName\":\"parse\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser\",\"fileName\":\"AbstractSAXParser.java\",\"lineNumber\":1213,\"methodName\":\"parse\",\"nativeMethod\":false},{\"className\":\"com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser\",\"fileName\":\"SAXParserImpl.java\",\"lineNumber\":642,\"methodName\":\"parse\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl\",\"fileName\":\"UnmarshallerImpl.java\",\"lineNumber\":243,\"methodName\":\"unmarshal0\",\"nativeMethod\":false},{\"className\":\"com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl\",\"fileName\":\"UnmarshallerImpl.java\",\"lineNumber\":214,\"methodName\":\"unmarshal\",\"nativeMethod\":false},{\"className\":\"javax.xml.bind.helpers.AbstractUnmarshallerImpl\",\"fileName\":\"AbstractUnmarshallerImpl.java\",\"lineNumber\":157,\"methodName\":\"unmarshal\",\"nativeMethod\":false},{\"className\":\"javax.xml.bind.helpers.AbstractUnmarshallerImpl\",\"fileName\":\"AbstractUnmarshallerImpl.java\",\"lineNumber\":214,\"methodName\":\"unmarshal\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.entity.MessageMLParser\",\"fileName\":\"MessageMLParser.java\",\"lineNumber\":52,\"methodName\":\"parse\",\"nativeMethod\":false},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"nativeMethod\":true},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":62,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"sun.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":498,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":590,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.entity.MessageMLParser",
+            "descriptor" : "(Ljava/lang/String;)Lorg/symphonyoss/integration/entity/MessageML;",
+            "methodName" : "parse"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.entity.MessageMLParser",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.exception.ExceptionMessageFormatter",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.healthcheck.IntegrationHealthManager",
+            "descriptor" : "(Lorg/symphonyoss/integration/model/healthcheck/IntegrationFlags$ValueEnum;)V",
+            "methodName" : "parserInstalled"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":null,\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"className\":\"org.symphonyoss.integration.healthcheck.IntegrationHealthManager\",\"fileName\":\"IntegrationHealthManager.java\",\"lineNumber\":145,\"methodName\":\"initConfigurator\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.healthcheck.IntegrationHealthManager\",\"fileName\":\"IntegrationHealthManager.java\",\"lineNumber\":141,\"methodName\":\"success\",\"nativeMethod\":false},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"nativeMethod\":true},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":62,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"sun.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":498,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":463,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":51,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.healthcheck.IntegrationHealthManager",
+            "descriptor" : "(Lorg/symphonyoss/integration/model/config/IntegrationSettings;)V",
+            "methodName" : "success"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.TimeSensitiveAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.healthcheck.IntegrationHealthManager",
+            "descriptor" : "(Ljava/lang/Long;)V",
+            "methodName" : "updateLatestPostTimestamp"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.healthcheck.IntegrationHealthManager",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"No content to map due to end-of-input\\n at [Source: UNKNOWN; line: 1, column: 0]\",\"originalClassName\":\"com.fasterxml.jackson.databind.JsonMappingException\",\"stackTrace\":[{\"className\":\"com.fasterxml.jackson.databind.JsonMappingException\",\"fileName\":\"JsonMappingException.java\",\"lineNumber\":270,\"methodName\":\"from\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":3838,\"methodName\":\"_initForReading\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":3783,\"methodName\":\"_readMapAndClose\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":2321,\"methodName\":\"readTree\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.json.JsonUtils\",\"fileName\":\"JsonUtils.java\",\"lineNumber\":52,\"methodName\":\"readTree\",\"nativeMethod\":false},{\"className\":\"sun.reflect.GeneratedMethodAccessor451\",\"fileName\":null,\"lineNumber\":-1,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"sun.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":498,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":590,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.json.JsonUtils",
+            "descriptor" : "(Ljava/io/InputStream;)Lcom/fasterxml/jackson/databind/JsonNode;",
+            "methodName" : "readTree"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.logging.DistributedTracingUtils",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.logging.DistributedTracingUtils",
+            "descriptor" : "()V",
+            "methodName" : "clearMDC"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.logging.DistributedTracingUtils",
+            "descriptor" : "()V",
+            "methodName" : "setMDC"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.logging.DistributedTracingUtils",
+            "descriptor" : "(Ljava/lang/String;)V",
+            "methodName" : "setMDC"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.logging.LogMessageSource",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lorg/symphonyoss/integration/logging/MessageUtils;\",\"simpleNames\":[\"MessageUtils\"]},\"fieldName\":\"accessor\"},{\"className\":{\"descriptor\":\"Lorg/symphonyoss/integration/logging/MessageUtils;\",\"simpleNames\":[\"MessageUtils\"]},\"fieldName\":\"bundleFileName\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.logging.MessageUtils",
+            "descriptor" : "(Ljava/lang/String;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.messageml.MessageMLFormatConstants",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.healthcheck.IntegrationFlags$ValueEnum",
+            "descriptor" : "(Ljava/lang/String;)Lorg/symphonyoss/integration/model/healthcheck/IntegrationFlags$ValueEnum;",
+            "methodName" : "valueOf"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.healthcheck.IntegrationFlags$ValueEnum",
+            "descriptor" : "()[Lorg/symphonyoss/integration/model/healthcheck/IntegrationFlags$ValueEnum;",
+            "methodName" : "values"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.message.Message$FormatEnum",
+            "descriptor" : "(Ljava/lang/String;)Lorg/symphonyoss/integration/model/message/Message$FormatEnum;",
+            "methodName" : "valueOf"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.message.Message$FormatEnum",
+            "descriptor" : "()[Lorg/symphonyoss/integration/model/message/Message$FormatEnum;",
+            "methodName" : "values"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.message.MessageMLVersion",
+            "descriptor" : "(Ljava/lang/String;)Lorg/symphonyoss/integration/model/message/MessageMLVersion;",
+            "methodName" : "valueOf"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.message.MessageMLVersion",
+            "descriptor" : "()[Lorg/symphonyoss/integration/model/message/MessageMLVersion;",
+            "methodName" : "values"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.stream.StreamType",
+            "descriptor" : "(Ljava/lang/String;)Lorg/symphonyoss/integration/model/stream/StreamType;",
+            "methodName" : "valueOf"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.stream.StreamType",
+            "descriptor" : "()[Lorg/symphonyoss/integration/model/stream/StreamType;",
+            "methodName" : "values"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.yaml.ApplicationState",
+            "descriptor" : "(Ljava/lang/String;)Lorg/symphonyoss/integration/model/yaml/ApplicationState;",
+            "methodName" : "valueOf"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.yaml.ApplicationState",
+            "descriptor" : "()[Lorg/symphonyoss/integration/model/yaml/ApplicationState;",
+            "methodName" : "values"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.yaml.IntegrationProperties",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.model.yaml.WhiteList",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.TimeoutInArrangeOrActSectionMessage\",\"serializableCause\":null,\"timeout\":\"20.000\"}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.parser.SafeString",
+            "descriptor" : "()V",
+            "methodName" : "replaceLineBreaks"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Java heap space\",\"originalClassName\":\"java.lang.OutOfMemoryError\",\"stackTrace\":[]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.parser.SafeString",
+            "descriptor" : "(Lorg/symphonyoss/integration/parser/SafeString;Lorg/symphonyoss/integration/parser/SafeString;)V",
+            "methodName" : "safeReplace"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.parser.SafeStringUtils",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.IntegrationUtils",
+            "descriptor" : "(Ljava/lang/String;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.NumberFormatUtils",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.RsaKeyUtils",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.SimpleFileUtils",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"File '/r/_work/cover/cover/symphonyoss-App-Integrations-Commons-2025.11.01/integration-commons/target/test-classes' exists but is a directory\",\"originalClassName\":\"java.io.IOException\",\"stackTrace\":[{\"className\":\"org.apache.commons.io.FileUtils\",\"fileName\":\"FileUtils.java\",\"lineNumber\":286,\"methodName\":\"openInputStream\",\"nativeMethod\":false},{\"className\":\"org.apache.commons.io.FileUtils\",\"fileName\":\"FileUtils.java\",\"lineNumber\":1765,\"methodName\":\"readFileToString\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.utils.SimpleFileUtils\",\"fileName\":\"SimpleFileUtils.java\",\"lineNumber\":45,\"methodName\":\"readFile\",\"nativeMethod\":false},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"nativeMethod\":true},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":62,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"sun.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":498,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":590,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.SimpleFileUtils",
+            "descriptor" : "(Ljava/lang/String;)Ljava/lang/String;",
+            "methodName" : "readFile"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Unrecognized token 'application': was expecting ('true', 'false' or 'null')\\n at [Source: java.io.ByteArrayInputStream@32def5dc; line: 1, column: 13]\",\"originalClassName\":\"com.fasterxml.jackson.core.JsonParseException\",\"stackTrace\":[{\"className\":\"com.fasterxml.jackson.core.JsonParser\",\"fileName\":\"JsonParser.java\",\"lineNumber\":1702,\"methodName\":\"_constructError\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.core.base.ParserMinimalBase\",\"fileName\":\"ParserMinimalBase.java\",\"lineNumber\":558,\"methodName\":\"_reportError\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.core.json.UTF8StreamJsonParser\",\"fileName\":\"UTF8StreamJsonParser.java\",\"lineNumber\":3528,\"methodName\":\"_reportInvalidToken\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.core.json.UTF8StreamJsonParser\",\"fileName\":\"UTF8StreamJsonParser.java\",\"lineNumber\":2686,\"methodName\":\"_handleUnexpectedValue\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.core.json.UTF8StreamJsonParser\",\"fileName\":\"UTF8StreamJsonParser.java\",\"lineNumber\":878,\"methodName\":\"_nextTokenNotInObject\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.core.json.UTF8StreamJsonParser\",\"fileName\":\"UTF8StreamJsonParser.java\",\"lineNumber\":772,\"methodName\":\"nextToken\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":3834,\"methodName\":\"_initForReading\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":3783,\"methodName\":\"_readMapAndClose\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":2321,\"methodName\":\"readTree\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.json.JsonUtils\",\"fileName\":\"JsonUtils.java\",\"lineNumber\":52,\"methodName\":\"readTree\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.utils.SimpleFileUtils\",\"fileName\":\"SimpleFileUtils.java\",\"lineNumber\":35,\"methodName\":\"readJsonFromFile\",\"nativeMethod\":false},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"nativeMethod\":true},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":62,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"sun.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":498,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":590,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.SimpleFileUtils",
+            "descriptor" : "(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;",
+            "methodName" : "readJsonFromFile"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"File '/r/_work/cover/cover/symphonyoss-App-Integrations-Commons-2025.11.01/integration-commons/target/test-classes' exists but is a directory\",\"originalClassName\":\"java.io.IOException\",\"stackTrace\":[{\"className\":\"org.apache.commons.io.FileUtils\",\"fileName\":\"FileUtils.java\",\"lineNumber\":286,\"methodName\":\"openInputStream\",\"nativeMethod\":false},{\"className\":\"org.apache.commons.io.FileUtils\",\"fileName\":\"FileUtils.java\",\"lineNumber\":1765,\"methodName\":\"readFileToString\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.utils.SimpleFileUtils\",\"fileName\":\"SimpleFileUtils.java\",\"lineNumber\":45,\"methodName\":\"readFile\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.utils.SimpleFileUtils\",\"fileName\":\"SimpleFileUtils.java\",\"lineNumber\":39,\"methodName\":\"readMessageMLFile\",\"nativeMethod\":false},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"nativeMethod\":true},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":62,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"sun.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":498,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":590,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.SimpleFileUtils",
+            "descriptor" : "(Ljava/lang/String;)Ljava/lang/String;",
+            "methodName" : "readMessageMLFile"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.TokenUtils",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "generateToken"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.TokenUtils",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"No content to map due to end-of-input\\n at [Source: ; line: 1, column: 0]\",\"originalClassName\":\"com.fasterxml.jackson.databind.JsonMappingException\",\"stackTrace\":[{\"className\":\"com.fasterxml.jackson.databind.JsonMappingException\",\"fileName\":\"JsonMappingException.java\",\"lineNumber\":270,\"methodName\":\"from\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":3838,\"methodName\":\"_initForReading\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":3783,\"methodName\":\"_readMapAndClose\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":2381,\"methodName\":\"readTree\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.utils.WebHookConfigurationUtils\",\"fileName\":\"WebHookConfigurationUtils.java\",\"lineNumber\":188,\"methodName\":\"fromJsonString\",\"nativeMethod\":false},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"nativeMethod\":true},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":62,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"sun.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":498,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":590,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.WebHookConfigurationUtils",
+            "descriptor" : "(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/node/ObjectNode;",
+            "methodName" : "fromJsonString"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"No content to map due to end-of-input\\n at [Source: ; line: 1, column: 0]\",\"originalClassName\":\"com.fasterxml.jackson.databind.JsonMappingException\",\"stackTrace\":[{\"className\":\"com.fasterxml.jackson.databind.JsonMappingException\",\"fileName\":\"JsonMappingException.java\",\"lineNumber\":270,\"methodName\":\"from\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":3838,\"methodName\":\"_initForReading\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":3783,\"methodName\":\"_readMapAndClose\",\"nativeMethod\":false},{\"className\":\"com.fasterxml.jackson.databind.ObjectMapper\",\"fileName\":\"ObjectMapper.java\",\"lineNumber\":2381,\"methodName\":\"readTree\",\"nativeMethod\":false},{\"className\":\"org.symphonyoss.integration.utils.WebHookConfigurationUtils\",\"fileName\":\"WebHookConfigurationUtils.java\",\"lineNumber\":71,\"methodName\":\"setStreams\",\"nativeMethod\":false},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"nativeMethod\":true},{\"className\":\"sun.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":62,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"sun.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":498,\"methodName\":\"invoke\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":590,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"nativeMethod\":false},{\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.utils.WebHookConfigurationUtils",
+            "descriptor" : "(Ljava/lang/String;Ljava/util/List;)Lcom/fasterxml/jackson/databind/node/ObjectNode;",
+            "methodName" : "setStreams"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "org.symphonyoss.integration.metrics.IntegrationMetricsController",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    }
+  ]
+}
