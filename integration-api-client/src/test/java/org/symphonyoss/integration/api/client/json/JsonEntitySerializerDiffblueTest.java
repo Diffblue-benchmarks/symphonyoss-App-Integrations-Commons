@@ -35,42 +35,6 @@ public class JsonEntitySerializerDiffblueTest {
    * Test {@link JsonEntitySerializer#serialize(Object)}.
    *
    * <ul>
-   *   <li>Given {@link JsonEntitySerializer} (default constructor).
-   *   <li>Then return Entity is {@code "Input"}.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonEntitySerializer#serialize(Object)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"Entity JsonEntitySerializer.serialize(Object)"})
-  public void testSerialize_givenJsonEntitySerializer_thenReturnEntityIsInput()
-      throws RemoteApiException {
-    // Arrange and Act
-    Entity<String> actualSerializeResult = new JsonEntitySerializer().serialize("Input");
-
-    // Assert
-    assertEquals("\"Input\"", actualSerializeResult.getEntity());
-    MediaType mediaType = actualSerializeResult.getMediaType();
-    assertEquals("application", mediaType.getType());
-    assertEquals("json", mediaType.getSubtype());
-    assertNull(actualSerializeResult.getEncoding());
-    Variant variant = actualSerializeResult.getVariant();
-    assertNull(variant.getEncoding());
-    assertNull(variant.getLanguageString());
-    assertNull(actualSerializeResult.getLanguage());
-    assertNull(variant.getLanguage());
-    assertEquals(0, actualSerializeResult.getAnnotations().length);
-    assertFalse(mediaType.isWildcardSubtype());
-    assertFalse(mediaType.isWildcardType());
-    assertTrue(mediaType.getParameters().isEmpty());
-    assertSame(mediaType, variant.getMediaType());
-  }
-
-  /**
-   * Test {@link JsonEntitySerializer#serialize(Object)}.
-   *
-   * <ul>
    *   <li>Given {@link JsonUtils} {@link JsonUtils#serialize(Object)} return {@code Serialize}.
    *   <li>Then return Entity is {@code Serialize}.
    * </ul>

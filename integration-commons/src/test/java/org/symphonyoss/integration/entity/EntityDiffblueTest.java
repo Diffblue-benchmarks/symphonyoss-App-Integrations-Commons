@@ -162,17 +162,12 @@ public class EntityDiffblueTest {
   /**
    * Test {@link Entity#addAttribute(Attribute)}.
    *
-   * <ul>
-   *   <li>Given {@link Entity#Entity(String)} with {@code Type}.
-   *   <li>Then {@link Entity#Entity(String)} with {@code Type} Attributes size is one.
-   * </ul>
-   *
    * <p>Method under test: {@link Entity#addAttribute(Attribute)}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"void Entity.addAttribute(Attribute)"})
-  public void testAddAttribute_givenEntityWithType_thenEntityWithTypeAttributesSizeIsOne() {
+  public void testAddAttribute() {
     // Arrange
     Entity entity = new Entity("Type");
     Attribute attribute = new Attribute("Name", "Type", "42");
