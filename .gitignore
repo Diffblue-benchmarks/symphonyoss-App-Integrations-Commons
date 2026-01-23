@@ -17,3 +17,9 @@ target/
 # NPM
 integration-commons/src/main/webapp/node_modules
 
+
+.diffblue/cache
+**.diffblue/cache
+**/.diffblue/cache
+**/**.diffblue/cache
+**/**/.diffblue/cache
